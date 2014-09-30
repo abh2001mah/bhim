@@ -1,0 +1,16 @@
+#!/bin/bash
+cd ~/bhim/bin
+
+for i in $@
+do
+	if [ ! -f $i ]
+	then
+		echo "File $i does not exist"
+	fi
+done
+
+vim "$@"
+for i in $@
+do
+	chmod +x $i
+done

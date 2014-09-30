@@ -1,0 +1,40 @@
+#!/bin/bash
+trim() { echo $1; }
+
+db_name="cms"
+groupDupPids="$1"
+if [ "$2" = "" ]; then
+	echo "deletePid groupDupPids.txt cms2 [solr|db|both]"
+	exit 0;
+fi 
+if [ "$3" = "" ]; then
+	echo "deletePid groupDupPids.txt cms2 [solr|db|both]"
+	exit 0;
+fi 
+host="$2"
+
+exec<$groupDupPids
+while IFS=',' read -ra pids; do
+	for (( i = 1 ; i < ${#pids[@]} ; i++ )); do
+		keepPid=${pids[0]}
+		keepPid="$(trim $keepPid)"
+		pid=${pids[$i]}
+		pid="$(trim $pid)"
+		#echo "keep |$keepPid| for |$pid|"
+		if [ "$3" = "db" ] || [ "$3" = "both" ]; then
+			deleteUrl="http://$host:8080/cms/deleteproduct?product_id=$pid&category=av_media&reason=duplicateProduct"
+			#echo "curl '$deleteUrl'";
+			curl $deleteUrl
+		fi 
+		
+		if [ "$3" = "solr" ] || [ "$3" = "both" ]; then
+			query="replace into DUPLICATE_PRODUCTS (product_id,duplicate_id) values ('$keepPid','$pid')"
+			mysql -N -uroot $db_name -e "$query"
+			deleteUrl="http://$host:9090/solr/update?stream.body=<delete><id>$pid</id></delete>"
+			#echo "curl '$deleteUrl'";
+			curl $deleteUrl
+		fi
+	done
+done
+
+

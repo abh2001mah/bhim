@@ -1,0 +1,53 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my $SVN="/opt/subversion/bin/svn";
+
+if ($#ARGV >= 0) {
+  if ("$ARGV[0]" eq "ci" || $ARGV[0] eq "commit") {
+    my @new_files=`"${SVN}" status | grep '^\?' | cut -c9-`;
+    
+    if ($#new_files >= 0) {
+      my @cleaned = ();
+      foreach my $f (@new_files) {
+        chomp $f;
+        $f =~ s/\r//g;
+        $f =~ s/\\/\//g;
+        push(@cleaned, $f);
+      }
+
+      @new_files = @cleaned;
+
+      print "add these new files?\n";
+      foreach my $f (@new_files) {
+        print "    $f\n";
+      }
+      print "\n";
+      my $response = <stdin>;
+      chomp $response;
+      if ( $response =~ m/y/i ) {
+        foreach my $f (@new_files) {
+          print `"${SVN}" add $f`;
+        }
+      }
+    }
+  }  
+}
+
+my $cmd="\"${SVN}\" " . "'" . join("' '", @ARGV) . "'";
+
+open (CMD, "$cmd |") || die $cmd;
+while(my $line = <CMD>) {
+  chomp $line;
+  $line =~ s/\r//g;
+
+  if ( "$ARGV[0]" =~ m/^st/ ) {
+    if ($line =~ m/^X / || $line =~ m/^Performing status on external/ || $line =~ m/^$/) {
+      next;
+    }
+  }
+
+  print "$line\n";
+}
+close CMD;

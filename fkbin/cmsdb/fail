@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ "$1" = "" ]; then
+	echo "Usage: fail [inf|itf|mf] 20 [avm|mob|com]";
+	exit 0;
+fi
+
+src=""
+cat="$3"
+
+if [ "$1" = "inf" ]; then
+	src="CMS_INDEXING_FAILURES"
+fi
+
+if [ "$1" = "itf" ]; then
+	src="CMS_ITEMIZATION_FAILURES"
+fi
+
+if [ "$1" = "mf" ]; then
+	src="CMS_MERGE_FAILURES"
+fi
+
+limit="$2"
+if [ "$limit" = "" ]; then
+	limit=10
+fi
+
+db_name="cms"
+#query="select product_id, failure_summary, last_updated from $src where product_id like '$cat%' order by last_updated desc limit $limit"
+#query="select distinct product_id, failure_summary, last_updated from $src where product_id like '$cat%' order by last_updated desc limit $limit"
+if [ "$cat" = "" ]; then
+    query="select distinct product_id, failure_summary from $src order by last_updated desc limit $limit"
+else
+    query="select distinct product_id, failure_summary from $src where product_id like '$cat%' order by last_updated desc limit $limit"
+fi
+echo $query
+mysql -uroot $db_name -e "$query"
+
+
+

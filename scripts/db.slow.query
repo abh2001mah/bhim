@@ -1,0 +1,13 @@
+#!/bin/bash
+shopt -s expand_aliases
+source ~/bhim/configs/bashrc.bhim.sh
+
+tmpFile=/tmp/$HOST.bhim.slow.query
+sudo tail -1000 /var/lib/mysql/$HOST-slow.log > $tmpFile
+mysqlsla -lt slow $tmpFile | /usr/bin/less
+
+
+sudo tail -1000 /var/lib/mysql/$HOST-slow.log > /tmp/$HOST.bhim.slow.query
+mysqlsla -lt slow /tmp/$HOST.bhim.slow.query | /usr/bin/less
+
+

@@ -1,0 +1,29 @@
+#!/bin/bash
+trim() { echo $1; }
+
+db_name="cms"
+groupDupPids="$1"
+if [ "$groupDupPids" = "" ]; then
+	echo "Usage: deleteSidPid sidPidsCombo.txt";
+	exit 0;
+fi
+
+deleteFromTables=(SUPPLIER_AV_MEDIA SUPPLIER_EAV_TABLE SUPPLIER_PRICING SUPPLIER_PRODUCT_IDENTIFICATION SUPPLIER_STOCKS)
+exec<$groupDupPids
+while IFS=',' read -ra pids; do
+	#for (( i = 1 ; i < ${#pids[@]} ; i++ )); do
+		pid=${pids[0]}
+		pid="$(trim $keepPid)"
+		sid=${pids[1]}
+		sid="$(trim $pid)"
+		#echo "keep |$keepPid| for |$pid|"
+		for table in "${deleteFromTables[@]}"; do
+			#echo "updating in $table..."
+			query="delete from $table where product_id='$pid' and supplier_id='$sid'"
+			echo $query
+			mysql -N -uroot $db_name -e "$query"
+		done
+	#done
+done
+
+

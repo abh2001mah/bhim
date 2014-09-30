@@ -1,0 +1,5 @@
+#!/bin/bash
+stopTomcat solr
+rm -rf /opt/solr_product/data
+mkdir /opt/solr_product/data
+startTomcat solr

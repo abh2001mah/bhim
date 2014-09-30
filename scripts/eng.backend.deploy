@@ -1,0 +1,34 @@
+#!/bin/bash
+
+MSG="$1"
+copyPath="$2"
+if [ "$MSG" = "" ]; then
+	echo "Usage: sanbox.backend.deploy 'deployment_reason' [src_copy_path]";
+	exit 0;
+fi
+if [ "$copyPath" = "" ]; then
+	copyPath="https://svn.corp.flipkart.com/svn/flipkart_dessert/branches/dev-branches/scf"
+	#echo "Usage: sanbox.backend.deploy 'deployment_reason' [src_copy_path]";
+	#exit 0;
+fi
+package="backend"
+timeStamp=`date "+%Y%m%d-%H%M"`
+
+svncopy="svn copy -m "\"$MSG\"" $copyPath https://svn.corp.flipkart.com/svn/flipkart_dessert/fk-cms-$package/eng/eng-$timeStamp"
+#svncopy="ls"
+echo "$svncopy"
+echo "The above path is correct [y/N]?"
+read answer
+#echo "Your answer is: $answer"
+if [ "$answer" = "y" ]; then
+	$svncopy
+	echo ""
+else
+	echo "Exiting..."
+	exit 0;
+fi
+deploy="sudo -u fk-ops-build fk-svn-monitor -p fk-cms-$package -t eng -b make-fk-cms"
+$deploy
+
+
+

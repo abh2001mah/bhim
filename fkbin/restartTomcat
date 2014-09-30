@@ -1,0 +1,5 @@
+#!/bin/bash
+stopTomcat $@
+sleep 10
+startTomcat $@
+

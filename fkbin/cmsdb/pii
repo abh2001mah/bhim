@@ -1,0 +1,15 @@
+#!/bin/bash
+db_name="cms"
+plist="("
+for pid in $@
+	do
+	plist="$plist'$pid',"
+	done
+len=`echo ${#plist}`
+plist=${plist:0:len-1} 
+plist="$plist)"
+query="select item_id, product_id, last_modified, created_on from PRODUCT_ITEMS where item_id in $plist order by item_id"
+echo $query
+mysql -uroot $db_name -e "$query" 
+
+

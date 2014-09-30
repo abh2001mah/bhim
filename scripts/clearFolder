@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in $*
+do
+	echo "Clearing $i"
+	rm -rf $i 
+	mkdir -p $i
+done

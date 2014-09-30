@@ -1,0 +1,17 @@
+#!/bin/bash
+#stopAllTomcat
+#for i in tomcat_solr tomcat tomcat_cms-service
+shopt -s expand_aliases
+source ~/bhim/configs/bashrc.bhim.sh
+#for i in tomcat_solr tomcat
+for i in solr cms
+do
+	~/bin/startTomcat $i
+	#/bin/rm  -rf /opt/$i/logs/catalina.out
+	#/bin/rm  -rf /opt/$i/catalina.pid
+	#/opt/$i/bin/catalina.sh start
+	#sleep 5
+	#/usr/bin/less -nM /opt/$i/logs/catalina.out
+done
+pgt
+

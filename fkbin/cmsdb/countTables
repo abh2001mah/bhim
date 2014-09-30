@@ -1,0 +1,11 @@
+#!/bin/bash
+db_name=$1
+
+echo "Tables count for $db_name"
+echo "------------------------------------------"
+
+for table_name in `showTables $db_name -sss`
+do
+	echo $table_name:`mysql -uroot -sss $db_name -e "select count(*) from $table_name "`
+done
+

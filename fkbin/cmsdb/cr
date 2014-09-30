@@ -1,0 +1,40 @@
+#!/bin/bash
+
+host="$1"
+if [ "$host" = "" ]; then
+	host="localhost"
+fi
+db_name="cms"
+cat="$2"
+MYSQL="mysql -h $host -uroot $db_name -e"
+echo "Usage: cr [hostname] | queue count on $host"
+src="CMS_MERGE_REQUESTS" 
+echo "$src($cat)" : `$MYSQL "select count(*) from $src where product_id like '$cat%'"`
+
+src="CMS_MERGE_FAILURES" 
+echo "$src($cat)" : `$MYSQL "select count(*) from $src where product_id like '$cat%'"`
+
+src="CMS_INDEXING_REQUESTS" 
+echo "$src($cat)" : `$MYSQL "select count(*) from $src where product_id like '$cat%'"`
+
+src="CMS_INDEXING_FAILURES"
+echo "$src($cat)" : `$MYSQL "select count(*) from $src where product_id like '$cat%'"`
+
+src="CMS_ITEMIZATION_REQUESTS" 
+echo "$src($cat)" : `$MYSQL "select count(*) from $src where product_id like '$cat%'"`
+
+src="CMS_ITEMIZATION_FAILURES"
+echo "$src($cat)" : `$MYSQL "select count(*) from $src where product_id like '$cat%'"`
+
+src="CMS_FEED_QUEUE"
+echo "$src" : `$MYSQL "select count(*) from CMS_FEED_QUEUE"`
+query="select category_id, supplier_id, file_name from CMS_FEED_QUEUE"
+$MYSQL "$query"
+echo ""
+query="select error_time, supplier_id, error_summary from CMS_FEED_ERRORS order by error_time desc limit 3\G"
+$MYSQL "$query"
+echo ""
+
+
+#~/bhim/cmsdb/catp com
+

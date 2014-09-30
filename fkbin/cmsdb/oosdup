@@ -1,0 +1,24 @@
+#!/bin/bash
+trim() { echo $1; }
+
+MYSQL=/usr/bin/mysql
+db_name="cms"
+groupDupPids="$1"
+if [ "$groupDupPids" = "" ]; then
+	echo "Usage: oosdup groupDupPids.txt";
+	exit 0;
+fi
+
+exec<$groupDupPids
+while IFS=',' read -ra pids; do
+	for (( i = 1 ; i < ${#pids[@]} ; i++ )); do
+		pid=${pids[$i]}
+		pid="$(trim $pid)"
+		query="update SUPPLIER_EAV_TABLE set attr_value=0 where attr_name='stock_size' and product_id='$pid'"
+		$MYSQL -N -uroot $db_name -e "$query"
+		query="insert into CMS_MERGE_REQUESTS (category_id, product_id) values ('av_media', '$pid')"
+		$MYSQL -N -uroot $db_name -e "$query"
+	done
+done
+
+

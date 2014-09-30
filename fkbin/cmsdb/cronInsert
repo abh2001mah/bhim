@@ -1,0 +1,71 @@
+#!/bin/bash
+
+if [ "$1" = "" ] || [ "$2" = "" ] || [ "$3" = "" ]; then
+	echo "Usage: move [avm|mob] [inf|itf|mf] [inr|itr|mr]";
+	exit 0;
+fi
+src=""
+dst=""
+cat="$1"
+cat_id="";
+
+if [ "$1" = "avm" ]; then
+	cat_id="av_media"
+fi
+if [ "$1" = "mob" ]; then
+	cat_id="mobile"
+fi
+if [ "$1" = "acc" ]; then
+	cat_id="accessory"
+fi
+
+
+if [ "$2" = "inf" ]; then
+	src="CMS_INDEXING_FAILURES"
+fi
+
+if [ "$2" = "itf" ]; then
+	src="CMS_ITEMIZATION_FAILURES"
+fi
+
+if [ "$2" = "mf" ]; then
+	src="CMS_MERGE_FAILURES"
+fi
+
+if [ "$3" = "inr" ]; then
+	dst="CMS_INDEXING_REQUESTS" 
+fi
+
+if [ "$3" = "itr" ]; then
+	dst="CMS_ITEMIZATION_REQUESTS" 
+fi
+
+if [ "$3" = "mr" ]; then
+	dst="CMS_MERGE_REQUESTS" 
+fi
+
+
+
+db_name="cms"
+
+#echo ""
+#echo "$src($cat)" : `mysql -uroot $db_name -e "select count(*) from $src where product_id like '$cat%'"`
+#echo "$dst($cat)" : `mysql -uroot $db_name -e "select count(*) from $dst where product_id like '$cat%'"`
+#echo ""
+#echo "Copying rows $src --> $dst ..."
+query="insert into $dst (category_id, product_id) (select distinct category_id, product_id from $src where product_id like '$cat%' order by last_updated desc)"
+#echo $query
+mysql -uroot $db_name -e "$query"
+
+#echo "Deleting rows $src ..."
+#query="delete from $src where product_id like '$cat%'"
+#echo $query
+#mysql -uroot $db_name -e "$query" 
+#echo ""
+#echo "$src($cat)" : `mysql -uroot $db_name -e "select count(*) from $src where product_id like '$cat%'"`
+#echo "$dst($cat)" : `mysql -uroot $db_name -e "select count(*) from $dst where product_id like '$cat%'"`
+#echo ""
+
+
+
+

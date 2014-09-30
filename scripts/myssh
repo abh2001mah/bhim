@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# First, check to see if we have the correct terminal!
+if [ "$(tty)" == 'not a tty' ] || [ "$TERM_PROGRAM" != "iTerm.app" ] ; then
+  /usr/bin/ssh "$@"
+  exit $?
+fi
+
+function set_bg {
+	local tty="$(tty)"
+	osascript -e '
+		tell application "iTerm"
+			activate
+				repeat with theTerminal in terminals
+					tell theTerminal
+						tell session id "$tty" 	
+							set foreground color to "red"
+							set background color to "blue"
+						end tell
+					end tell
+			end repeat
+		end tell
+		'
+}
+
+on_exit () {
+	osascript -e '
+		tell application "iTerm"
+			activate
+			set foreground color to "grey"
+			set background color to "black"
+		end tell
+		'
+}
+
+trap on_exit EXIT
+set_bg
+/usr/bin/ssh "$@"
+
+

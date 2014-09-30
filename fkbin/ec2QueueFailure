@@ -1,0 +1,16 @@
+#/bin/bash
+
+oldFile=/var/log/flipkart/alarms/alarm.log.old
+alarmFile=/var/log/flipkart/alarms/alarm.log
+diffFile=/var/log/flipkart/alarms/diffFile.log
+
+diff $alarmFile $oldFile > $diffFile
+cp $alarmFile $oldFile
+
+cat $diffFile | grep cms | grep -i itemization | mail -E -s "Itemization Failures" cms@flipkart.com
+cat $diffFile | grep cms | grep -i indexing | mail -E -s "Indexing Failures" cms@flipkart.com
+
+
+
+
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+base="/opt/tomcat/"
+
+if [ "$1" = "cms" ] 
+then
+	base="/opt/tomcat/"
+elif [ "$1" = "solr" ]
+then
+	base="/opt/tomcat_solr/"
+elif [ "$1" = "service" ]
+then
+	base="/opt/tomcat_cms-service"
+fi
+
+less $base/logs/catalina.out

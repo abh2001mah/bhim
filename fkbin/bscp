@@ -1,0 +1,36 @@
+#!/bin/bash
+shopt -s expand_aliases
+source ~/bhim/configs/bashrc.bhim.sh
+
+if [ "$1" = "" ] || [ "$2" = "" ];  then
+	echo "Usage: bscp data [sand|cms2|eng|local|vpn|host] abhishekm /home/abhishekm/fw/backup";
+	exit 0;
+fi
+userName="$3"
+host="$2"
+path="$4"
+if [ "$2" = "sand" ]; then
+	userName="abhishekm"
+	host="sandbox.dc.flipkart.com"
+	path="/home/abhishekm/fw/backup"
+elif [ "$2" = "cms2" ]; then
+	userName="abhishekm"
+	host="cms2.dc.flipkart.com"
+	path="/home/abhishekm/fw/backup"
+elif [ "$2" = "eng" ]; then
+	userName="abhishekm"
+	host="192.168.3.8"
+	path="/home/abhishekm/fw/backup"
+elif [ "$2" = "local" ]; then
+	host="192.168.3.170"
+	userName="abhishek"
+	path="/Users/abhishek/fw/backup"
+elif [ "$2" = "vpn" ]; then
+	host="192.168.10.126"
+	userName="abhishek"
+	path="/Users/abhishek/fw/backup"
+fi
+echo "scp $1 $userName@$host:$path/"
+scp $1 $userName@$host:$path/
+
+

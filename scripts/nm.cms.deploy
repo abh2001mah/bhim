@@ -1,0 +1,28 @@
+#!/bin/bash
+package="$1"
+MSG="$2"
+copyPath="$3"
+if [ "$package" = "" ]; then
+	echo "Usage: nm.cms.deploy [backend|service|search] 'deployment_reason' [src_copy_path]";
+	exit 0;
+fi
+
+if [ "$MSG" = "" ]; then
+	echo "Usage: nm.cms.deploy [backend|service|search] 'deployment_reason' [src_copy_path]";
+	exit 0;
+fi
+
+if [ "$copyPath" = "" ]; then
+	copyPath="https://svn.corp.flipkart.com/svn/flipkart_dessert/branches/dev-branches/alok"
+fi
+
+timeStamp=`date "+%Y%m%d-%H%M"`
+
+svncopy="svn copy -m "\"$MSG\"" $copyPath https://svn.corp.flipkart.com/svn/flipkart_dessert/fk-cms-$package/nm/nm-$timeStamp"
+echo "$svncopy"
+$svncopy
+deploy="sudo -u fk-ops-build fk-svn-monitor -p fk-cms-$package -t nm -b make-fk-cms"
+echo $deploy
+$deploy
+
+

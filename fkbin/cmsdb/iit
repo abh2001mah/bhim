@@ -1,0 +1,53 @@
+#!/bin/bash
+
+if [ "$1" = "" ]; then
+	echo "Usage: iit [mr|inr|itr] AVMCNQ5XGHXXNEYB";
+	exit 0;
+fi
+if [ "$2" = "" ]; then
+	echo "Usage: iit [mr|inr|itr] AVMCNQ5XGHXXNEYB";
+	exit 0;
+fi
+if [ "$3" != "" ]; then
+	echo "Usage: iit [mr|inr|itr] AVMCNQ5XGHXXNEYB";
+	exit 0;
+fi
+
+src=""
+if [ "$1" = "inr" ]; then
+	src="CMS_INDEXING_REQUESTS"
+fi
+
+if [ "$1" = "itr" ]; then
+	src="CMS_ITEMIZATION_REQUESTS"
+fi
+
+if [ "$1" = "mf" ]; then
+	src="CMS_MERGE_REQUESTS"
+fi
+
+pid="$2"
+cat=""
+cat_prefix=${pid:0:3}
+if [ "$cat_prefix" = "AVM" ]; then
+	cat="av_media"
+fi
+if [ "$cat_prefix" = "MOB" ]; then
+	cat="mobile"
+fi
+if [ "$cat_prefix" = "ACC" ]; then
+	cat="accessory"
+fi
+if [ "$cat_prefix" = "GMC" ]; then
+	cat="gmaingconsole"
+fi
+if [ "$cat_prefix" = "RBK" ]; then
+	cat="regionalbooks"
+fi
+db_name="cms"
+query="insert into $src (category_id, product_id) values ('$cat','$pid')"
+echo $query
+#mysql -uroot $db_name -e "$query"
+
+
+

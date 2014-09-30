@@ -1,0 +1,20 @@
+#!/bin/bash
+db_name="cms"
+plist="("
+if [ "$1" = "" ]; then
+	echo "Usage: ss AVMCZW3DZH8ZR5X8";
+	exit 0;
+fi
+for pid in $@
+	do
+	plist="$plist'$pid',"
+	done
+len=`echo ${#plist}`
+plist=${plist:0:len-1} 
+plist="$plist)"
+query="select product_id, supplier_id, is_price, is_available, mrp, stock_size, last_modified from SUPPLIER_STOCKS where product_id in $plist"
+echo $query
+mysql -uroot $db_name -e "$query"
+
+
+

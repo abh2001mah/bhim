@@ -1,0 +1,3 @@
+netstat -a | grep 9090
+netstat -ao | grep "pid" (To display all ports open by a process with id pid)
+
