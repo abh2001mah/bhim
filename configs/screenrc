@@ -1,0 +1,124 @@
+###############################################################################
+#    Screen common profile
+#      This GNU Screen configuration profile is intended to roughly
+#      approximate a graphical desktop, inspired by the Ubuntu Gnome Desktop.
+#
+#    Copyright (C) 2008 Canonical Ltd.
+#
+#    Authors: Dustin Kirkland <kirkland@canonical.com>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, version 3 of the License.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+###############################################################################
+
+# Now, let's override with our customizations
+startup_message off
+vbell on
+msgwait 5
+defutf8 on
+
+# Automatically detach on hangup.
+autodetach on
+
+# Set the altscreen so that when you quit vi, it will go back to what it was before
+altscreen on
+
+# Don't block command output if the terminal stops responding (like if the ssh connection times out for example).
+nonblock on
+
+
+# Turns off alternate screen switching in xterms,
+# so that text in screen will go into the xterm's scrollback buffer:
+termcapinfo xterm* ti@:te@
+
+# Enable 256 color terminal
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+
+# Log 10000 lines
+defscrollback 10000
+
+compacthist on
+
+# Monitor windows
+defmonitor on
+activity ""
+
+# Fit to the current window size, useful with F5/reloads of the profile
+fit
+# Make screen messages stand out a little more - black on bright green.
+#sorendition "+b kG"
+#sorendition 2 34
+
+# Window tabs, second to last line
+#caption always "%12`%?%-Lw%50L>%?%{=r}%n*%f %t%?(%u)%?%{-}%12`%?%+Lw%?%11` %=%12`%110`%109`%122`%111`%10`%<"
+#--caption always "%12`%?%-Lw%50L>%?%{=r}%n*%f %t%?(%u)%?%{-}%12`%?%+Lw%?%11` %=%H%<"
+#caption always "%3n %t%? @%u%?%? [%h]%?%=%c:%s"
+#caption always "%{= kc}%H (system load: %l)%-21=%{= .m}%D %d.%m.%Y %0c"
+#caption always "%?%{+b kw}%-Lw%?%{yK}%n*%f %t%?(%u)%?%?%{wk}%+Lw%? %{gk}%=%c:%s %{yk}%d/%M/%Y"
+#caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
+#caption always "%L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
+#backtick 1 5 5 true
+#termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+#hardstatus string "%n %t"
+#caption always "%{= kw}%Y-%m-%d;%c %{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+Lw%1`"
+#caption always "%{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+Lw%1`"
+
+
+# Status string, last line
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#hardstatus alwayslastline "Scn:%{=b}%{G} %{b}%w%=%{kG}%C%A"
+#hardstatus alwayslastline ' %{=kG}[%{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+#hardstatus alwayslastline "%{=b}%{G}Scn: %{b}%w %=%{G}%C%A  %D, %M/%d/%Y "
+#hardstatus alwayslastline '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %C %A %{w}]%{w}'
+#hardstatus alwayslastline '%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?% Lw%?%?%= %{g}]%{=b C}[ %d %M %c ]%{W}'
+#hardstatus alwayslastline "%{=b}%{G} Screens: %{b}%w %=%{kG}%C%A  %D, %M/%d/%Y "
+#hardstatus alwayslastline "%99`%{-}%{=r}%12` %100`%112`%= %130`%135`%102`%101`%129`%131`%127`%114`%115`%108`%134`%128`%125`%126`%113`%119`%133`%117`%116`%106`%104`%103`%105`%107`%136`%123`%132`%120`%121`"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %=%D %M %d %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %=[%c:%s, %D, %d/%m/%y]"
+#hardstatus alwayslastline "%{kw} %{b}%H%{K}    < %-w%{Wb} %n %t %{-}%+w >"
+#hardstatus alwayslastline "%-w%{Wb} %n %t %{-}%+w %=%{b}%H%{K} %D %M %d %c:%s%{-}"
+#hardstatus alwayslastline "%{= kK}%-Lw%{= KW}%50>%n%f %t%{= kK}%+Lw%< %{=kG}%-= %D %M %d %c:%s%{-}"
+hardstatus alwayslastline "%=%D %M %d %c:%s%{-}"
+
+# right/left bindings
+#bindkey "^[[c" next
+#bindkey "^[[d" prev
+#bindkey "^[[b" focus
+
+# for ctrl right and left arrows
+#bindkey ^[O3D prev
+#bindkey ^[O3C next
+
+# for shift right and left arrows
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
+
+escape ``
+
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10                                                            
+screen 1
+
+bind 'q' quit
+
+# NOTE: Older version of screen have an arbitrary limit of only being able
+# to change colors 16 times in this 'hardstatus string'.
+# Ubuntu (fixed in Jaunty):
+#  * https://bugs.launchpad.net/bugs/315871
+# Upstream:
+#  * http://savannah.gnu.org/bugs/?22146
+
+
+

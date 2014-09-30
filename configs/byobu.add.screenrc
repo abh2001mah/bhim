@@ -1,0 +1,54 @@
+# Now, let's override with our customizations
+vbell on
+
+# Automatically detach on hangup.
+autodetach on
+
+# Set the altscreen so that when you quit vi, it will go back to what it was before
+altscreen on
+
+# Don't block command output if the terminal stops responding (like if the ssh connection times out for example).
+nonblock on
+
+# don't display the copyright page
+startup_message off
+
+# allow people to attach to my screen
+multiuser on
+
+# fix scrollback in putty
+termcapinfo xterm* ti@:te@
+
+# setup 10,0000 lines of available scrollback copy/paste
+defscrollback 100000
+
+# for shift right and left arrows
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
+
+#PROMPT_COMMAND='echo -ne "\033]0;${HOST}|${PWD##/*/}\007"'
+
+# Set the title to the name of the running program
+#shelltitle "$ |bash"
+
+# make them better
+bind 'K' kill
+bind '}' history
+
+# remove some stupid / dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+
+# Buffer file is where the screen copy buffer will be saved to.
+bufferfile /tmp/sb-amaheshw
+
+#hardstatus alwayslastline "%12`%?%-Lw%50L>%?%{=r}%n*%f %t%?(%u)%?%{-}%12`%?%+Lw%?%11` %=%122`%120`%121`"
+hardstatus alwayslastline "%12`%?%-Lw%50L>%?%{=r}%n*%f %t%?(%u)%?%{-}%12`%?%+Lw%?%11` %=%Y-%m-%d %c:%s "
+
+
+

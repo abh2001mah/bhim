@@ -1,0 +1,9 @@
+# Write your default config options here!
+subfont-osd-scale=2.5
+subfont-text-scale=2.5
+osdlevel=0
+fs=yes
+#aspect=16/9
+#monitoraspect=16/9
+volume=50
+

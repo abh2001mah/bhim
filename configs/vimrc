@@ -1,0 +1,90 @@
+set viminfo='10,\"100,:20,%,n~/.viminfo
+set nocompatible
+set matchpairs+=(:),{:},[:],<:>
+set showmatch
+"set mouse=a  "does not work on mac for copy purposes
+"set mousemodel=extend
+"set mousefocus
+set showcmd         " display incomplete commands
+syntax on           " syntax highlighing
+"colorscheme herald
+"colorscheme koehler
+"colorscheme evening 
+set visualbell
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set ls=2
+set autowrite
+set number
+set ignorecase hlsearch smartcase "Press space to clear search highlighting and any message already displayed.
+"set incsearch 
+set autowrite " Automatically save before commands like :next and :make
+set ruler
+set nostartofline  
+set ttyfast
+set showmode
+set clipboard=unnamed
+set diffopt+=filler,iwhite
+set diffexpr=
+set scrolloff=3     " keep 3 lines when scrolling
+set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
+set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
+set autoread "Set to auto read when a file is changed from the outside
+set hidden "Allow unsaved hidden buffers
+"set cursorline " highlight current line
+set history=100 "keep 100 lines of Ex commands 
+set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
+set wrapscan "wrap search 
+
+imap jj <Esc> " Professor VIM says '87% of users prefer jj over esc', jj abrams disagrees
+imap zz <C-X><C-N>
+nmap \ <C-W><C-W>
+
+" Quit with 'q' instead of ':q'. VERY useful!
+nmap q :q<CR>
+nmap s :w<CR>
+" Quit with 'wq' instead of ':wq'. VERY useful!
+nmap sq :wq<CR>
+nmap q1 :q!<CR>
+
+"Map Semicolon to : for faster command execution
+nmap ' :e
+nmap ; :
+"nmap t :e ~/todo.txt<CR>
+
+nmap l :bn<CR>
+nmap k :bp<CR>
+nmap cl :bd<CR>
+nmap c "+y
+nmap cy "+yy
+nmap [ :tabp<CR>
+nmap ] :tabn<CR>
+nmap tn :tabnew<CR> 
+nmap r :redo<CR> 
+nmap ls :!ls<CR>
+nmap pwd :!pwd<CR>
+ 
+"Copy current file to clipboard
+nmap <C-x>	:!cat %\|sed 's/	/    /g'\|pbcopy<CR><CR>
+
+"Automatically cd into the directory that the file is in 
+"autocmd BufEnter * lcd %:p:h
+"set autochdir 
+nmap lcd :cd %:p:h<CR>
+
+vmap c "+y
+vmap cy "+yy
+
+filetype plugin on
+
+"Insert mode mappings
+"imap <C-[> <ESC>:tabp<CR>i
+"imap <C-]> <ESC>:tabn<CR>i
+
+
+" When editing a file, always jump to the last cursor position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+
+

@@ -1,0 +1,769 @@
+file_export_version=3.0
+
+# File        : maroloccio.epf
+# Description : A colour scheme for Eclipse (Java, Python, C++, JavaScript, ...)
+# Scheme      : maroloccio
+# Maintainer  : Marco Ippolito <maroloccio[at]gmail.com>
+# Version     : v0.0.2
+# Date        : 15 April 2010
+# Licence     : Feel free to use as you wish provided you keep this header.
+# Feedback    : Any feedback welcome! Especially re: how to make it better!
+# Online at   : http://sites.google.com/site/maroloccio/
+# Screenshot  : http://picasaweb.google.com/lh/photo/o7mWcx9G8TMXoU80S--_uw
+#
+# History:
+#
+# 0.0.2 Added sourceHoverBackgroundColor to JDT section
+# 0.0.1 Inital upload to Google Docs
+
+
+# ------------------------------------------------------------------------------
+# Eclipse Java : Editor
+# ------------------------------------------------------------------------------
+# Source hover background
+/instance/org.eclipse.jdt.ui/sourceHoverBackgroundColor=49,22,106
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Eclipse C/C++ Development Tooling - CDT : Build Console
+# ------------------------------------------------------------------------------
+# Console background color
+/instance/org.eclipse.cdt.ui/buildConsoleBackgroundColor=14,18,25
+# Console output stream color
+/instance/org.eclipse.cdt.ui/buildConsoleOutputStreamColor=139,154,170
+# ------------------------------------------------------------------------------
+# Eclipse Editors : Text Editors
+# ------------------------------------------------------------------------------
+# Print margin color
+/instance/org.eclipse.ui.editors/printMarginColor=44,49,56
+# Current line highlight
+/instance/org.eclipse.ui.editors/currentLineColor=0,0,0
+# Line number foreground
+/instance/org.eclipse.ui.editors/lineNumberColor=44,49,56
+# ------------------------------------------------------------------------------
+# Eclipse Appearance
+# ------------------------------------------------------------------------------
+# Configure Text Compare colours
+/instance/org.eclipse.ui.workbench/OUTGOING_COLOR=120,186,66
+/instance/org.eclipse.ui.workbench/CONFLICTING_COLOR=143,50,49
+/instance/org.eclipse.ui.workbench/INCOMING_COLOR=130,173,224
+/instance/org.eclipse.ui.workbench/RESOLVED_COLOR=16,112,64
+# Eclipse Appearance : Colours and Fonts
+# ------------------------------------------------------------------------------
+# Background colour
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Background.SystemDefault=false
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Background=14,18,25
+# Foreground colour
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Foreground.SystemDefault=false
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Foreground=139,154,170
+# Selection background colour
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionBackground=49,22,106
+# Content assist background colour
+/instance/org.eclipse.ui.workbench/CONTENT_ASSIST_BACKGROUND_COLOR=255,255,255
+# Content assist foreground colour
+/instance/org.eclipse.ui.workbench/CONTENT_ASSIST_FOREGROUND_COLOR=0,0,0
+# ------------------------------------------------------------------------------
+# Eclipse Java : Properties File Editor
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.jdt.ui/pf_coloring_argument=255,153,0
+/instance/org.eclipse.jdt.ui/pf_coloring_assignment=16,112,64
+/instance/org.eclipse.jdt.ui/pf_coloring_key=255,153,0
+/instance/org.eclipse.jdt.ui/pf_coloring_comment=76,76,172
+/instance/org.eclipse.jdt.ui/pf_coloring_value=120,186,66
+/instance/org.eclipse.jdt.ui/pf_coloring_argument_italic=false
+/instance/org.eclipse.jdt.ui/pf_coloring_argument_strikethrough=false
+/instance/org.eclipse.jdt.ui/pf_coloring_argument_underline=false
+/instance/org.eclipse.jdt.ui/pf_coloring_assignment_bold=false
+/instance/org.eclipse.jdt.ui/pf_coloring_assignment_italic=false
+/instance/org.eclipse.jdt.ui/pf_coloring_assignment_strikethrough=false
+/instance/org.eclipse.jdt.ui/pf_coloring_assignment_underline=false
+/instance/org.eclipse.jdt.ui/pf_coloring_comment_bold=false
+/instance/org.eclipse.jdt.ui/pf_coloring_comment_italic=false
+/instance/org.eclipse.jdt.ui/pf_coloring_comment_strikethrough=false
+/instance/org.eclipse.jdt.ui/pf_coloring_comment_underline=false
+/instance/org.eclipse.jdt.ui/pf_coloring_key_bold=false
+/instance/org.eclipse.jdt.ui/pf_coloring_key_italic=false
+/instance/org.eclipse.jdt.ui/pf_coloring_key_strikethrough=false
+/instance/org.eclipse.jdt.ui/pf_coloring_key_underline=false
+/instance/org.eclipse.jdt.ui/pf_coloring_value_bold=false
+/instance/org.eclipse.jdt.ui/pf_coloring_value_italic=false
+/instance/org.eclipse.jdt.ui/pf_coloring_value_strikethrough=false
+/instance/org.eclipse.jdt.ui/pf_coloring_value_underline=false
+# ------------------------------------------------------------------------------
+# Eclipse Java : Editor : Syntax Colouring
+# ------------------------------------------------------------------------------
+# Java keyword
+/instance/org.eclipse.jdt.ui/java_keyword_bold=false
+/instance/org.eclipse.jdt.ui/java_keyword_italic=false
+/instance/org.eclipse.jdt.ui/java_keyword_underline=false
+/instance/org.eclipse.jdt.ui/java_keyword_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_keyword=255,204,0
+# Java keyword return
+/instance/org.eclipse.jdt.ui/java_keyword_return_bold=false
+/instance/org.eclipse.jdt.ui/java_keyword_return_italic=false
+/instance/org.eclipse.jdt.ui/java_keyword_return_underline=false
+/instance/org.eclipse.jdt.ui/java_keyword_return_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_keyword_return=139,139,0
+# Java default
+/instance/org.eclipse.jdt.ui/java_default_bold=false
+/instance/org.eclipse.jdt.ui/java_default_italic=false
+/instance/org.eclipse.jdt.ui/java_default_underline=false
+/instance/org.eclipse.jdt.ui/java_default_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_default=139,154,170
+# Java bracket
+/instance/org.eclipse.jdt.ui/java_bracket_bold=false
+/instance/org.eclipse.jdt.ui/java_bracket_italic=false
+/instance/org.eclipse.jdt.ui/java_bracket_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_bracket_underline=false
+/instance/org.eclipse.jdt.ui/java_bracket=255,204,0
+# Java deprecated member
+/instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.bold=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.strikethrough=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.deprecatedMember.color=255,0,0
+# Java operator
+/instance/org.eclipse.jdt.ui/java_operator_bold=false
+/instance/org.eclipse.jdt.ui/java_operator_italic=false
+/instance/org.eclipse.jdt.ui/java_operator_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_operator_underline=false
+/instance/org.eclipse.jdt.ui/java_operator=139,154,170
+# Java number
+/instance/org.eclipse.jdt.ui/semanticHighlighting.number.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.number.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.number.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.number.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.number.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.number.color=109,82,121
+# Java string
+/instance/org.eclipse.jdt.ui/java_string_bold=false
+/instance/org.eclipse.jdt.ui/java_string_italic=false
+/instance/org.eclipse.jdt.ui/java_string_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_string_underline=false
+/instance/org.eclipse.jdt.ui/java_string=109,82,121
+# Java single line comment
+/instance/org.eclipse.jdt.ui/java_single_line_comment_bold=false
+/instance/org.eclipse.jdt.ui/java_single_line_comment_italic=false
+/instance/org.eclipse.jdt.ui/java_single_line_comment_underline=false
+/instance/org.eclipse.jdt.ui/java_single_line_comment_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_single_line_comment=76,76,172
+# Java multi line comment
+/instance/org.eclipse.jdt.ui/java_multi_line_comment=76,76,172
+/instance/org.eclipse.jdt.ui/java_multi_line_comment_bold=false
+/instance/org.eclipse.jdt.ui/java_multi_line_comment_italic=false
+/instance/org.eclipse.jdt.ui/java_multi_line_comment_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_multi_line_comment_underline=false
+# Java documentation comments
+/instance/org.eclipse.jdt.ui/java_doc_keyword_bold=false
+/instance/org.eclipse.jdt.ui/java_doc_keyword_italic=false
+/instance/org.eclipse.jdt.ui/java_doc_keyword_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_doc_keyword_underline=false
+/instance/org.eclipse.jdt.ui/java_doc_default=55,65,173
+/instance/org.eclipse.jdt.ui/java_doc_keyword=51,51,102
+/instance/org.eclipse.jdt.ui/java_doc_tag=51,51,102
+/instance/org.eclipse.jdt.ui/java_doc_link=51,51,102
+# Java class
+/instance/org.eclipse.jdt.ui/semanticHighlighting.class.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.class.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.class.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.class.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.class.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.class.color=255,153,0
+# Java method
+/instance/org.eclipse.jdt.ui/semanticHighlighting.method.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.method.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.method.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.method.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.method.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.method.color=120,186,66
+# Java inherited method
+/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.color=120,186,66
+# Java abstract method
+/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.abstractMethodInvocation.color=120,186,66
+# Java method declaration
+/instance/org.eclipse.jdt.ui/semanticHighlighting.methodDeclarationName.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.methodDeclarationName.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.methodDeclarationName.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.methodDeclarationName.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.methodDeclarationName.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.methodDeclarationName.color=130,173,224
+# Java local variable
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariable.color=16,112,64
+# Java local variable declaration
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.localVariableDeclaration.color=143,50,49
+# Java field
+/instance/org.eclipse.jdt.ui/semanticHighlighting.field.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.field.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.field.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.field.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.field.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.field.color=38,128,175
+# Java static field
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticField.color=38,128,175
+# Java static final field
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.color=38,128,175
+# Java static method
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.color=38,128,175
+# Java parameter variable
+/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.parameterVariable.color=126,40,169
+# Java interface
+/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.underline=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.interface.color=153,102,204
+# Java type parameter
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.color=0,102,102
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.underline=false
+# Java enum
+/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.color=255,153,0
+/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.enum.underline=false
+# Java type argument
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeArgument.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeArgument.color=0,102,102
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeArgument.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeArgument.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeArgument.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.typeArgument.underline=false
+# Java annotation
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.color=153,102,204
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.underline=false
+# Java annotation element reference
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotationElementReference.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotationElementReference.color=38,128,175
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotationElementReference.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotationElementReference.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotationElementReference.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.annotationElementReference.underline=false
+# Java comment task tag
+/instance/org.eclipse.jdt.ui/java_comment_task_tag_bold=true
+/instance/org.eclipse.jdt.ui/java_comment_task_tag_italic=false
+/instance/org.eclipse.jdt.ui/java_comment_task_tag_strikethrough=false
+/instance/org.eclipse.jdt.ui/java_comment_task_tag_underline=true
+/instance/org.eclipse.jdt.ui/java_comment_task_tag=255,0,0
+# Java auto boxing
+/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.color=109,82,121
+/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.enabled=true
+/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.bold=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.italic=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.strikethrough=false
+/instance/org.eclipse.jdt.ui/semanticHighlighting.autoboxing.underline=false
+# ------------------------------------------------------------------------------
+# Eclipse Java : Editor : Mark Occurrences
+# ------------------------------------------------------------------------------
+# Mark occurrences of the selected element in the current file
+/instance/org.eclipse.ui.editors/occurrenceIndication=true
+/instance/org.eclipse.ui.editors/occurrenceHighlighting=true
+/instance/org.eclipse.ui.editors/occurrenceIndicationColor=51,51,102
+/instance/org.eclipse.ui.editors/occurrenceTextStyle=UNDERLINE
+# ------------------------------------------------------------------------------
+# Eclipse C/C++ : Editor : Syntax Coloring
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.cdt.ui/asm_directive.enabled=true
+/instance/org.eclipse.cdt.ui/asm_directive=55,65,173
+/instance/org.eclipse.cdt.ui/asm_directive_bold=false
+/instance/org.eclipse.cdt.ui/asm_directive_italic=false
+/instance/org.eclipse.cdt.ui/asm_directive_strikethrough=false
+/instance/org.eclipse.cdt.ui/asm_directive_underline=false
+/instance/org.eclipse.cdt.ui/asm_label.enabled=true
+/instance/org.eclipse.cdt.ui/asm_label=51,51,102
+/instance/org.eclipse.cdt.ui/asm_label_bold=false
+/instance/org.eclipse.cdt.ui/asm_label_italic=false
+/instance/org.eclipse.cdt.ui/asm_label_strikethrough=false
+/instance/org.eclipse.cdt.ui/asm_label_underline=false
+/instance/org.eclipse.cdt.ui/c_braces.enabled=true
+/instance/org.eclipse.cdt.ui/c_braces=255,204,0
+/instance/org.eclipse.cdt.ui/c_braces_bold=false
+/instance/org.eclipse.cdt.ui/c_braces_italic=false
+/instance/org.eclipse.cdt.ui/c_braces_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_braces_underline=false
+/instance/org.eclipse.cdt.ui/c_comment_task_tag=255,0,0
+/instance/org.eclipse.cdt.ui/c_comment_task_tag_bold=false
+/instance/org.eclipse.cdt.ui/c_comment_task_tag_italic=false
+/instance/org.eclipse.cdt.ui/c_comment_task_tag_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_default.enabled=true
+/instance/org.eclipse.cdt.ui/c_default=139,154,170
+/instance/org.eclipse.cdt.ui/c_default_bold=false
+/instance/org.eclipse.cdt.ui/c_default_italic=false
+/instance/org.eclipse.cdt.ui/c_default_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_default_underline=false
+/instance/org.eclipse.cdt.ui/c_keyword.enabled=true
+/instance/org.eclipse.cdt.ui/c_keyword=255,204,0
+/instance/org.eclipse.cdt.ui/c_keyword_bold=false
+/instance/org.eclipse.cdt.ui/c_keyword_italic=false
+/instance/org.eclipse.cdt.ui/c_keyword_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_keyword_underline=false
+/instance/org.eclipse.cdt.ui/c_multi_line_comment.enabled=true
+/instance/org.eclipse.cdt.ui/c_multi_line_comment=76,76,172
+/instance/org.eclipse.cdt.ui/c_multi_line_comment_bold=false
+/instance/org.eclipse.cdt.ui/c_multi_line_comment_italic=false
+/instance/org.eclipse.cdt.ui/c_multi_line_comment_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_multi_line_comment_underline=false
+/instance/org.eclipse.cdt.ui/c_numbers.enabled=true
+/instance/org.eclipse.cdt.ui/c_numbers=109,82,121
+/instance/org.eclipse.cdt.ui/c_numbers_bold=false
+/instance/org.eclipse.cdt.ui/c_numbers_italic=false
+/instance/org.eclipse.cdt.ui/c_numbers_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_numbers_underline=false
+/instance/org.eclipse.cdt.ui/c_operators.enabled=true
+/instance/org.eclipse.cdt.ui/c_operators=139,154,170
+/instance/org.eclipse.cdt.ui/c_operators_bold=false
+/instance/org.eclipse.cdt.ui/c_operators_italic=false
+/instance/org.eclipse.cdt.ui/c_operators_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_operators_underline=false
+/instance/org.eclipse.cdt.ui/c_single_line_comment.enabled=true
+/instance/org.eclipse.cdt.ui/c_single_line_comment=76,76,172
+/instance/org.eclipse.cdt.ui/c_single_line_comment_bold=false
+/instance/org.eclipse.cdt.ui/c_single_line_comment_italic=false
+/instance/org.eclipse.cdt.ui/c_single_line_comment_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_single_line_comment_underline=false
+/instance/org.eclipse.cdt.ui/c_string.enabled=true
+/instance/org.eclipse.cdt.ui/c_string=109,82,121
+/instance/org.eclipse.cdt.ui/c_string_bold=false
+/instance/org.eclipse.cdt.ui/c_string_italic=false
+/instance/org.eclipse.cdt.ui/c_string_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_string_underline=false
+/instance/org.eclipse.cdt.ui/c_type.enabled=true
+/instance/org.eclipse.cdt.ui/c_type=255,153,0
+/instance/org.eclipse.cdt.ui/c_type_bold=false
+/instance/org.eclipse.cdt.ui/c_type_italic=false
+/instance/org.eclipse.cdt.ui/c_type_strikethrough=false
+/instance/org.eclipse.cdt.ui/c_type_underline=false
+/instance/org.eclipse.cdt.ui/pp_default.enabled=true
+/instance/org.eclipse.cdt.ui/pp_default=55,65,173
+/instance/org.eclipse.cdt.ui/pp_default_bold=false
+/instance/org.eclipse.cdt.ui/pp_default_italic=false
+/instance/org.eclipse.cdt.ui/pp_default_strikethrough=false
+/instance/org.eclipse.cdt.ui/pp_default_underline=false
+/instance/org.eclipse.cdt.ui/pp_directive.enabled=true
+/instance/org.eclipse.cdt.ui/pp_directive=55,65,173
+/instance/org.eclipse.cdt.ui/pp_directive_bold=false
+/instance/org.eclipse.cdt.ui/pp_directive_italic=false
+/instance/org.eclipse.cdt.ui/pp_directive_strikethrough=false
+/instance/org.eclipse.cdt.ui/pp_directive_underline=false
+/instance/org.eclipse.cdt.ui/pp_header.enabled=true
+/instance/org.eclipse.cdt.ui/pp_header=51,51,102
+/instance/org.eclipse.cdt.ui/pp_header_bold=false
+/instance/org.eclipse.cdt.ui/pp_header_italic=false
+/instance/org.eclipse.cdt.ui/pp_header_stri=false
+/instance/org.eclipse.cdt.ui/pp_header_underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.class.color=255,153,0
+/instance/org.eclipse.cdt.ui/semanticHighlighting.class.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.class.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.class.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.class.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.class.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enum.color=255,153,0
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enum.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enum.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enum.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enum.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enum.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.color=153,102,204
+/instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.externalSDK.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.field.color=38,128,175
+/instance/org.eclipse.cdt.ui/semanticHighlighting.field.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.field.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.field.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.field.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.field.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.function.color=120,186,66
+/instance/org.eclipse.cdt.ui/semanticHighlighting.function.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.function.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.function.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.function.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.function.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.color=130,173,224
+/instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.globalVariable.color=16,112,64
+/instance/org.eclipse.cdt.ui/semanticHighlighting.globalVariable.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.globalVariable.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.globalVariable.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.globalVariable.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.globalVariable.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.color=16,112,64
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariable.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.color=143,50,49
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.localVariableDeclaration.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.method.color=120,186,66
+/instance/org.eclipse.cdt.ui/semanticHighlighting.method.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.method.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.method.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.method.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.method.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.color=120,186,66
+/instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.parameterVariable.color=126,40,169
+/instance/org.eclipse.cdt.ui/semanticHighlighting.parameterVariable.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.parameterVariable.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.parameterVariable.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.parameterVariable.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.parameterVariable.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.problem.color=255,0,0
+/instance/org.eclipse.cdt.ui/semanticHighlighting.problem.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.problem.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.problem.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.problem.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.problem.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.color=38,128,175
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.color=38,128,175
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.templateParameter.color=0,102,102
+/instance/org.eclipse.cdt.ui/semanticHighlighting.templateParameter.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.templateParameter.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.templateParameter.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.templateParameter.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.templateParameter.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.overloadedOperator.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.overloadedOperator.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.overloadedOperator.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.overloadedOperator.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.overloadedOperator.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.overloadedOperator.color=139,154,170
+/instance/org.eclipse.cdt.ui/semanticHighlighting.label.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.label.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.label.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.label.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.label.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.label.color=51,51,102
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroDefinition.color=38,128,175
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroSubstitution.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroSubstitution.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroSubstitution.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroSubstitution.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroSubstitution.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.macroSubstitution.color=38,128,175
+/instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.color=255,153,0
+/instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.color=255,153,0
+# ------------------------------------------------------------------------------
+# Eclipse C/C++ : Make : Makefile Editor
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.default=139,154,170
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.default_bold=false
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.keyword=255,204,0
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.keyword_bold=false
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.function_bold=false
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.function=126,40,169
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.comment_bold=false
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.comment=76,76,172
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.macro_ref_bold=false
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.macro_ref=120,186,66
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.macro_def_bold=false
+/instance/org.eclipse.cdt.make.ui/org.eclipse.cdt.make.ui.editor.macro_def=130,173,224
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enumerator.enabled=true
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enumerator.strikethrough=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enumerator.italic=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enumerator.bold=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enumerator.underline=false
+/instance/org.eclipse.cdt.ui/semanticHighlighting.enumerator.color=38,128,175
+# ------------------------------------------------------------------------------
+# Eclipse Pydev : Editor : Appearance color options
+# ------------------------------------------------------------------------------
+/instance/org.python.pydev/KEYWORD_COLOR=255,204,0
+/instance/org.python.pydev/KEYWORD_STYLE=0
+/instance/org.python.pydev/CODE_COLOR=139,154,170
+/instance/org.python.pydev/CODE_STYLE=0
+/instance/org.python.pydev/CLASS_NAME_COLOR=255,153,0
+/instance/org.python.pydev/CLASS_NAME_STYLE=0
+/instance/org.python.pydev/EDITOR_MATCHING_BRACKETS_COLOR=255,204,0
+/instance/org.python.pydev/EDITOR_MATCHING_BRACKETS_STYLE=0
+/instance/org.python.pydev/COMMENT_COLOR=76,76,172
+/instance/org.python.pydev/COMMENT_STYLE=0
+/instance/org.python.pydev/NUMBER_COLOR=143,50,49
+/instance/org.python.pydev/FUNC_NAME_STYLE=0
+/instance/org.python.pydev/SELF_COLOR=16,112,64
+/instance/org.python.pydev/SELF_STYLE=0
+/instance/org.python.pydev/STRING_COLOR=38,128,175
+/instance/org.python.pydev/STRING_STYLE=0
+/instance/org.python.pydev/FUNC_NAME_COLOR=120,186,66
+/instance/org.python.pydev/NUMBER_STYLE=0
+/instance/org.python.pydev/DECORATOR_COLOR=153,102,204
+/instance/org.python.pydev/DECORATOR_STYLE=0
+/instance/org.python.pydev/BACKQUOTES_COLOR=0,102,102
+/instance/org.python.pydev/BACKQUOTES_STYLE=0
+# ------------------------------------------------------------------------------
+# Eclipse Web : JavaScript : Editor : Syntax Coloring
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.wst.jsdt.ui/java_bracket=255,204,0
+/instance/org.eclipse.wst.jsdt.ui/java_bracket_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_bracket_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_bracket_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_bracket_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_comment_task_tag=255,0,0
+/instance/org.eclipse.wst.jsdt.ui/java_comment_task_tag_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_comment_task_tag_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_comment_task_tag_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_default=139,154,170
+/instance/org.eclipse.wst.jsdt.ui/java_default_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_default_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_default_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_default_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_default=55,65,173
+/instance/org.eclipse.wst.jsdt.ui/java_doc_default_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_default_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_default_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_default_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_keyword=51,51,102
+/instance/org.eclipse.wst.jsdt.ui/java_doc_keyword_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_keyword_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_keyword_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_link=51,51,102
+/instance/org.eclipse.wst.jsdt.ui/java_doc_link_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_link_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_link_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_link_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_tag=51,51,102
+/instance/org.eclipse.wst.jsdt.ui/java_doc_tag_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_tag_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_tag_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_doc_tag_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword=255,204,0
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_return=139,139,0
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_return_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_return_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_return_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_keyword_return_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_multi_line_comment=76,76,172
+/instance/org.eclipse.wst.jsdt.ui/java_multi_line_comment_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_multi_line_comment_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_multi_line_comment_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_multi_line_comment_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_operator=139,154,170
+/instance/org.eclipse.wst.jsdt.ui/java_operator_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_operator_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_operator_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_operator_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_single_line_comment=76,76,172
+/instance/org.eclipse.wst.jsdt.ui/java_single_line_comment_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_single_line_comment_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_single_line_comment_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_single_line_comment_underline=false
+/instance/org.eclipse.wst.jsdt.ui/java_string=109,82,121
+/instance/org.eclipse.wst.jsdt.ui/java_string_bold=false
+/instance/org.eclipse.wst.jsdt.ui/java_string_italic=false
+/instance/org.eclipse.wst.jsdt.ui/java_string_strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/java_string_underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.deprecatedMember.bold=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.deprecatedMember.color=255,0,0
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.deprecatedMember.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.deprecatedMember.strikethrough=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.deprecatedMember.underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.bold=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.color=16,112,64
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.enabled=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariable.underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariableDeclaration.bold=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariableDeclaration.color=143,50,49
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariableDeclaration.enabled=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariableDeclaration.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariableDeclaration.strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.localVariableDeclaration.underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.method.bold=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.method.color=120,186,66
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.method.enabled=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.method.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.method.strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.method.underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.methodDeclarationName.color=130,173,224
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.methodDeclarationName.enabled=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.methodDeclarationName.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.methodDeclarationName.strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.methodDeclarationName.underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.parameterVariable.bold=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.parameterVariable.color=126,40,169
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.parameterVariable.enabled=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.parameterVariable.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.parameterVariable.strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.parameterVariable.underline=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.objectInitializer.color=255,204,0
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.objectInitializer.enabled=true
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.objectInitializer.italic=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.objectInitializer.strikethrough=false
+/instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.objectInitializer.underline=false
+/instance/org.eclipse.wst.jsdt.ui/org.eclipse.wst.jsdt.ui.exception.name=exception
+/instance/org.eclipse.wst.jsdt.ui/org.eclipse.wst.jsdt.ui.visibility.order=B,V,R,D,
+# ------------------------------------------------------------------------------
+# Eclipse Web : CSS Files : Editor : Syntax Coloring
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.wst.css.ui/SELECTOR=\#ff9900                |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/CURLY_BRACE=\#ffcc00             |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/COMMENT=\#4c4cac                 |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/NORMAL=\#8b9aaa                  |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/PROPERTY_NAME=\#107040           |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/PROPERTY_VALUE=\#78ba42          |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/COLON=\#8f3231                   |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/ERROR=\#ff0000                   |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/STRING=\#6d5279                  |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/ATMARK_RULE=\#7e28a9             |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/SEMI_COLON=\#82ade0              |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.css.ui/URI=\#2680af                     |  null  |  false  |  false  |  false  |  false
+# ------------------------------------------------------------------------------
+# Eclipse Web : HTML Files : Editor : Syntax Coloring
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.wst.html.core/lineWidth=999
+/instance/org.eclipse.wst.html.core/clearAllBlankLines=true
+/instance/org.eclipse.wst.html.core/indentationChar=space
+/instance/org.eclipse.wst.html.core/indentationSize=4
+/instance/org.eclipse.wst.html.core/alignEndBracket=true
+/instance/org.eclipse.wst.html.core/splitMultiAttrs=false
+/instance/org.eclipse.wst.html.ui/tagName=\#ff9900                |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/tagAttributeName=\#ffcc00       |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/tagBorder=\#8f3231              |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/tagAttributeEquals=\#2680af     |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/tagAttributeValue=\#78ba42      |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/xmlContent=\#107040             |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/commentBorder=\#333366          |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/declBoder=\#8f3231              |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/commentText=\#4c4cac            |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/entityReference=\#6d5279        |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/doctypeName=\#82ade0            |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/doctypeExternalId=\#7e28a9      |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/doctypeExternalPubref=\#9966cc  |  null  |  false  |  false  |  false  |  false
+/instance/org.eclipse.wst.html.ui/doctypeExtrenalSysref=\#9966cc  |  null  |  false  |  false  |  false  |  false
+# ------------------------------------------------------------------------------
+# Eclipse XML : XML Files : Editor
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.wst.xml.core/lineWidth=999
+/instance/org.eclipse.wst.xml.core/clearAllBlankLines=true
+/instance/org.eclipse.wst.xml.core/indentationChar=space
+/instance/org.eclipse.wst.xml.core/indentationSize=4
+/instance/org.eclipse.wst.xml.core/alignEndBracket=true
+/instance/org.eclipse.wst.xml.core/splitMultiAttrs=false
+/instance/org.eclipse.wst.xml.ui/tagName=\#ff9900                 |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/tagAttributeName=\#ffcc00        |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/tagBorder=\#8f3231               |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/tagAttributeEquals=\#2680af      |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/tagAttributeValue=\#78ba42       |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/xmlContent=\#107040              |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/commentBorder=\#333366           |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/declBoder=\#8f3231               |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/commentText=\#4c4cac             |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/entityReference=\#6d5279         |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/doctypeName=\#82ade0             |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/doctypeExternalId=\#7e28a9       |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/doctypeExternalPubref=\#9966cc   |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/doctypeExtrenalSysref=\#9966cc   |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/cdataBorder=\#8f3231             |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/cdataText=\#8b9aaa               |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/piBorder=\#8f3231                |  null  |  false  |  false   |  false  |  false
+/instance/org.eclipse.wst.xml.ui/piContent=\#8b9aaa               |  null  |  false  |  false   |  false  |  false
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Eclipse Team : SVN
+# ------------------------------------------------------------------------------
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.reuse_open_compare_editors=true
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.sychronizing_default_perspective_to_show=never
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.show_author_in_compare_editor=true
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.view_syncinfo_in_label=true
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.default_layout=org.eclipse.team.ui.tree_layout
+/instance/org.tigris.subversion.subclipse.ui/pref_console_command_color=16,112,64
+/instance/org.tigris.subversion.subclipse.ui/pref_console_error_color=143,50,49
+/instance/org.tigris.subversion.subclipse.ui/pref_console_high_water_mark=999
+/instance/org.tigris.subversion.subclipse.ui/pref_console_message_color=38,128,175
+# ------------------------------------------------------------------------------
+
