@@ -1,0 +1,35 @@
+# matches "bin" in any subfolder
+bin/
+
+# ignore all target directories
+target/
+
+# ignore all files ending with ~
+*~
+
+#Mac OS X Files
+.DS_Store 
+
+#VIM swp files
+*.swp
+
+#Eclipse files
+.classpath
+.project
+.settings
+
+#IntelliJ files
+*.iml
+.idea/
+
+#Some log files
+mci.log
+mi.log
+pig_*.log
+
+#Some generated files
+*.pig.expanded
+
+#Ignore gitignore changes
+.gitignore
+
