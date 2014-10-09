@@ -1,5 +1,0 @@
-#!/bin/bash
-db_name="cms"
-table_name=$1
-mysql -sss -uroot $db_name -e "select count(*) from $table_name"
-

@@ -1,8 +1,0 @@
-#!/bin/bash
-stopAllTomcats
-clearFolder /opt/tomcat_solr/logs
-clearSolar
-/opt/tomcat_solr/bin/catalina.sh start
-sleep 2
-less /opt/tomcat_solr/logs/catalina.out
-

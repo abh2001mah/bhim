@@ -1,7 +1,0 @@
-#!/bin/bash
-for i in /var/log/flipkart 
-do
-	echo clearing $i
-	rm -rf $i
-	mkdir -p $i
-done
