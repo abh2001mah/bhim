@@ -56,7 +56,7 @@ nmap ; :
 nmap l :bn<CR>
 nmap k :bp<CR>
 nmap cl :bd<CR>
-nmap c "+y
+"nmap c "+y
 nmap cy "+yy
 nmap [ :tabp<CR>
 nmap ] :tabn<CR>
@@ -73,7 +73,7 @@ nmap <C-x>	:!cat %\|sed 's/	/    /g'\|pbcopy<CR><CR>
 "set autochdir 
 nmap lcd :cd %:p:h<CR>
 
-vmap c "+y
+"vmap c "+y
 vmap cy "+yy
 
 filetype plugin on

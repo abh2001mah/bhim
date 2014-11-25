@@ -26,6 +26,7 @@ export HADOOP_PREFIX=$HOME/installed/hadoop
 export HIVE_HOME=$HOME/installed/hive
 export PIG_HOME=$HOME/installed/pig
 export SPARK_HOME=$HOME/installed/spark
+export GIRAPH_HOME=$HOME/installed/giraph
 
 export PRESTO_HOME=$HOME/installed/presto
 
@@ -42,7 +43,7 @@ export LC_MESSAGES="en_US.UTF-8"
 export HISTCONTROL=erasedups
 export HISTSIZE=99999
 
-folders=( /usr/local/mysql/bin /opt/subversion/bin $MY_HOME/installed/byobu/bin $MY_HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $OOZIE_HOME/bin $MY_HOME/bin $MY_HOME/installed/bindfs/bin)
+folders=( /usr/local/mysql/bin /opt/subversion/bin $MY_HOME/installed/byobu/bin $MY_HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $GIRAPH_HOME/bin $OOZIE_HOME/bin $MY_HOME/bin $MY_HOME/installed/bindfs/bin)
 for folder in "${folders[@]}"; do
 	if [ -d "$folder" ] ; then
 		#echo $folder

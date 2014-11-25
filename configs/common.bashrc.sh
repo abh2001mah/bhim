@@ -6,6 +6,7 @@
 #export PROMPT_COMMAND='echo -ne "\033]0;${HOST}\007"'
 export mst=" -Dmaven.test.skip=true"
 export grs="| grep -v .svn | grep -v '/target/'"
+export mg="-Dhadoop=non_secure -Phadoop_1 -DskipTests -DskipJavadoc -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true"
 
 alias ls="/bin/ls -hHF"
 alias l="ls -tG"
@@ -112,8 +113,9 @@ alias hj="hadoop jar"
 alias hu="hd -dus"
 alias hp="hd -put"
 alias hdr="hadoop dfsadmin -report"
-alias mk="mapred job -kill"
+alias hk="hadoop job -kill"
 alias jp="jps | grep -v 'Jps\|RemoteMavenServer'"
+alias ph="jp | /usr/bin/grep -i 'node\|tracker'"
 alias pi="pig -param_file $HOME/pig.properties "
 #alias mio="$m1 install -o"
 #alias m2ci="$m2 clean install"
@@ -154,6 +156,7 @@ alias ps1="cd $PRESTO_HOME/bin; ./launcher start; cd -"
 alias ps2="cd $PRESTO_HOME/bin; ./launcher stop; cd -"
 
 alias rhs="rh; sleep 2; hs2"
+alias links="la | grep '\->'"
 
 function pres() {
 	cd /Users/abhishekmaheshwari/installed/presto/bin
