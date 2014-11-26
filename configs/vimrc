@@ -16,7 +16,7 @@ set shiftwidth=2
 set softtabstop=2
 set ls=2
 set autowrite
-set number
+"set number
 set ignorecase hlsearch smartcase "Press space to clear search highlighting and any message already displayed.
 "set incsearch 
 set autowrite " Automatically save before commands like :next and :make
