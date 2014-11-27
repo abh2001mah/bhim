@@ -8,14 +8,14 @@ export mst=" -Dmaven.test.skip=true"
 export grs="| grep -v .svn | grep -v '/target/'"
 export mg="-Dhadoop=non_secure -Phadoop_1 -DskipTests -DskipJavadoc -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true"
 
-alias ls="/bin/ls -htHFG --color=always"
+alias ls="ls -htHFG"
 alias l="ls"
 alias cd2="cd; cd -"
 alias ll="l -l"
 alias la="ll -A"
 alias lt="ll -t"
 alias lr="ll -R"
-alias grep='/bin/grep --color=always'
+alias grep='~/bin/grep --color=always'
 alias vim="/usr/bin/vim -u ~$MY_USERNAME/bhim/configs/vimrc "
 alias vimdiff="vimdiff -u ~$MY_USERNAME/bhim/configs/vimrc "
 alias b='vim ~/.bashrc'
@@ -62,7 +62,7 @@ alias st='svn st |  grep -v "^X" | grep -v "Performing status on external item a
 alias sq="stg | grep '? '"
 alias sts="st | sort"
 alias sdf='st | cut -c 8-'
-alias sqxr="sq | /usr/bin/grep '\.log' | cut -c 8- | xargs rm -vf"
+alias sqxr="sq | ~/bin/grep '\.log' | cut -c 8- | xargs rm -vf"
 alias sc="st | grep 'C '"
 alias sm='st | grep "M \|A \|D \|C "'
 alias sa='st | grep "M \|A \|D \|C \|? "'
@@ -80,6 +80,7 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias gsl="git stash list"
 alias guiau="git update-index --assume-unchanged "
+alias gb="git branch -a"
 alias sve="svn propget svn:externals ."
 alias sme="svn pe svn:externals ."
 alias svi="svn propget svn:ignore ."
@@ -114,6 +115,12 @@ alias hu="hd -dus"
 alias hp="hd -put"
 alias hdr="hadoop dfsadmin -report"
 alias hk="hadoop job -kill"
+alias dd-start="hadoop-daemon.sh start datanode; ph"
+alias dd-stop="hadoop-daemon.sh stop datanode; ph"
+alias nn-start="hadoop-daemon.sh start namenode; ph"
+alias nn-stop="hadoop-daemon.sh stop namenode; ph"
+alias tt-start="hadoop-daemon.sh start tasktracker; ph"
+alias tt-stop="hadoop-daemon.sh stop tasktracker; ph"
 alias jp="jps | grep -v 'Jps\|RemoteMavenServer'"
 alias ph="jp | grep -i 'node\|tracker'"
 alias pi="pig -param_file $HOME/pig.properties "
@@ -229,11 +236,11 @@ function grd() {
 }
 
 function gr() {
-	grep -r -n "$1" * | /usr/bin/grep -v .svn | /usr/bin/grep -v '/target/'
+	grep -r -n "$1" * | ~/bin/grep -v .svn | ~/bin/grep -v '/target/'
 }
 
 function gri() {
-	grep -r -n -i "$1" * | /usr/bin/grep -v .svn | /usr/bin/grep -v '/target/'
+	grep -r -n -i "$1" * | ~/bin/grep -v .svn | ~/bin/grep -v '/target/'
 }
 
 function s1() {
