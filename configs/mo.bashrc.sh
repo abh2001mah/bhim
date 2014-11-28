@@ -76,6 +76,9 @@ function mt() {
 	#cp $2.log $2-$suffix.log
 }
 
+function cs() {
+	ssh -i $1 cloud-user@$2
+}
 
 alias ms2="ssh root@192.168.128.62"
 alias ps2="ping 192.168.128.62"
