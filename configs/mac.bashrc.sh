@@ -11,3 +11,5 @@ alias preview='/Applications/Preview.app/Contents/MacOS/Preview'
 #alias java='/usr/bin/java -Djava.awt.headless=true'
 #alias naf='cd /Volumes/100G/naf-herbals'
 alias ip="ifconfig| grep inet"
+
+#export JAVA_HOME=`/usr/libexec/java_home`
