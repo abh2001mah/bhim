@@ -1,9 +1,9 @@
 #!/bin/bash
-export MY_USERNAME=abhishekmaheshwari
-export MY_HOME=/Users/abhishekmaheshwari
-export JAVA_HOME=`/usr/libexec/java_home`
+#export MY_USERNAME=abhishekmaheshwari
+#export MY_HOME=/Users/abhishekmaheshwari
+#export JAVA_HOME=`/usr/libexec/java_home`
 
-for file in $MY_HOME/bhim/configs/exports.sh $MY_HOME/common.bashrc.sh $MY_HOME/local.bashrc.sh 
+for file in ~/bhim/configs/exports.sh ~/common.bashrc.sh ~/local.bashrc.sh 
 do
 	if [ -f "$file" ]; then
 #		echo $file
@@ -12,7 +12,7 @@ do
 done
 
 export PS1='[\t|\W]\\$ '
-export HOST=`hostname -s|cut -d'-' -f 5`
+#export HOST=`hostname -s|cut -d'-' -f 5`
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##/*/}\007"'
 
 case ${TERM} in

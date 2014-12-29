@@ -26,6 +26,7 @@ colorscheme evening
 set columns=179
 set lines=44
 set diffopt+=filler,iwhite
+set number
 
 " Make shift-insert work like in Xterm
 map <S-Insert> <MiddleMouse>
