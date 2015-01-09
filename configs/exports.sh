@@ -17,6 +17,7 @@ export SPARK_HOME=$HOME/installed/spark
 export GIRAPH_HOME=$HOME/installed/giraph
 export PRESTO_HOME=$HOME/installed/presto
 export GRADLE_HOME=$HOME/installed/gradle
+export HBASE_HOME=$HOME/installed/hbase
 
 #export HADOOP_MAPRED_HOME=$HADOOP_HOME
 #export HADOOP_COMMON_HOME=$HADOOP_HOME
@@ -43,7 +44,7 @@ export LC_MESSAGES="en_US.UTF-8"
 export HISTCONTROL=erasedups
 export HISTSIZE=99999
 
-folders=( $JAVA_HOME/bin /usr/local/git/bin /usr/local/mysql/bin /opt/subversion/bin $HOME/installed/byobu/bin $HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $GIRAPH_HOME/bin $OOZIE_HOME/bin $HOME/bin $HOME/installed/bindfs/bin $GRADLE_HOME/bin)
+folders=( $JAVA_HOME/bin /usr/local/git/bin /usr/local/mysql/bin /opt/subversion/bin $HOME/installed/byobu/bin $HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $GIRAPH_HOME/bin $OOZIE_HOME/bin $HOME/bin $HOME/installed/bindfs/bin $GRADLE_HOME/bin $HBASE_HOME/bin )
 for folder in "${folders[@]}"; do
 	if [ -d "$folder" ] ; then
 		#echo $folder

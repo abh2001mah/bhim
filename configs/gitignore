@@ -16,9 +16,10 @@ target/
 #Eclipse files
 .classpath
 .project
-.settings
+.settings/
 
 #IntelliJ files
+*.iws
 *.iml
 .idea/
 
@@ -29,7 +30,4 @@ pig_*.log
 
 #Some generated files
 *.pig.expanded
-
-#Ignore gitignore changes
-.gitignore
 

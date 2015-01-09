@@ -2,13 +2,14 @@
 shopt -s expand_aliases
 source $HOME/common.bashrc.sh
 
+alias bd="./build.sh -Pdev -DskipTests"
 alias pv='ping 115.112.115.67'
 alias mo='cd $HOME/mobileum'
 alias dm="cd $HOME/scm/mobileum/datamodel"
+alias pc="find ~/scm/mobileum/datamodel/ -name "*.pig" | xargs -I {} cp {} /opt/mobileum/resources/pig/"
 export cdbug=" -Dstandalone.client.debug=true"
 export sdbug=" -Dmaven.surefire.debug=true"
 export mts=" -Dmaven.test.skip=true"
-export dm=" -Pdev"
 
 function mcs() {
 	echo "mvn clean verify -Pcheck-short $1 $2 $3 | tee check-short.log" | tee check-short.log
@@ -96,5 +97,5 @@ for i in {1..9}
 	done
 
 function numf() {
-	find $1 -type f | wc -l
+	find $1 -type f | wc
 }

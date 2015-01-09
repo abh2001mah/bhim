@@ -55,7 +55,6 @@ alias commit='git commit'
 alias sd='svn diff -x -w -x -b -x --ignore-eol-style'
 alias sr='svn revert'
 #alias srr='svn revert . -R'
-alias sl="svn log $1"
 alias gzip="gzip -v"
 alias si="svn info | grep 'URL\|Changed'"
 alias crons='cd /etc/cron.d/'
@@ -99,7 +98,6 @@ alias ps='ps -e'
 alias psg="ps | grep -v \"grep\""
 alias pgt='psg | grep Dcatalina.home='
 alias pgj='psg | grep java'
-alias pg="psg | grep $1"
 export m1='mvn -Dcheckstyle.skip=true -DskipTests -DskipJavadoc -Dmaven.javadoc.skip=true -DdownloadJavadocs=false -DdownloadSources=false'
 export m2="$m1 -Dmaven.test.skip=true"
 export maven="$m1"
@@ -135,7 +133,7 @@ alias nn-rs="nn-stop; sleep 2; nn-start"
 alias tt-rs="tt-stop; sleep 2; tt-start"
 alias jt-rs="jt-stop; sleep 2; jt-start"
 alias jp="jps | grep -v 'Jps\|RemoteMavenServer\|Launcher\|NailgunRunner'"
-alias ph="jp | grep -i 'node\|tracker\|worker\|master'"
+alias ph="jp | grep -i 'node\|tracker\|worker\|master\|peer\|regionserver'"
 alias pi="pig -param_file $HOME/pig.properties "
 #alias mio="$m1 install -o"
 #alias m2ci="$m2 clean install"
@@ -158,13 +156,14 @@ alias hss="cd $HIVE_HOME/bin; ./hiveserver2; jps; cd -"
 alias bs="cd $HIVE_HOME/bin; ./beeline; cd -"
 alias hib="cd $HIVE_HOME/bin"
 
-alias ha="cd $HADOOP_HOME"
-alias has="cd $HADOOP_HOME/sbin"
-alias sh1="cd $HADOOP_HOME/sbin; ./start-all.sh; cd -"
-alias sh1="cd $HADOOP_HOME/sbin; ./start-dfs.sh; ./start-yarn.sh;cd -"
-alias sh2="cd $HADOOP_HOME/sbin; ./stop-all.sh; cd -"
-alias sh2="cd $HADOOP_HOME/sbin; ./stop-dfs.sh; ./stop-yarn.sh; cd -"
-alias rh="sh2; sh1"
+#alias ha="cd $HADOOP_HOME"
+#alias has="cd $HADOOP_HOME/sbin"
+#alias sh1="cd $HADOOP_HOME/sbin; ./start-all.sh; cd -"
+#alias sh1="cd $HADOOP_HOME/sbin; ./start-dfs.sh; ./start-yarn.sh;cd -"
+#alias sh2="cd $HADOOP_HOME/sbin; ./stop-all.sh; cd -"
+#alias sh2="cd $HADOOP_HOME/sbin; ./stop-dfs.sh; ./stop-yarn.sh; cd -"
+#alias rh="sh2; sh1"
+#alias rhs="rh; sleep 2; hs2"
 alias pyc="pgj | grep YarnChild"
 alias yc="pgj | grep YarnChild | wc -l"
 alias pma="pgj | grep _m_"
@@ -172,11 +171,29 @@ alias mc="pgj | grep _m_ | wc -l"
 alias pre="pgj | grep _r_"
 alias rc="pgj | grep _r_ | wc -l"
 
-alias ps1="cd $PRESTO_HOME/bin; ./launcher start; cd -"
-alias ps2="cd $PRESTO_HOME/bin; ./launcher stop; cd -"
+alias p1="cd $PRESTO_HOME/bin; ./launcher start; cd -"
+alias p2="cd $PRESTO_HOME/bin; ./launcher stop; cd -"
 
-alias rhs="rh; sleep 2; hs2"
 alias links="la | grep '\->'"
+
+function hh() {
+	hc $1 | head
+}
+
+function hw() {
+	hc $1 | wc
+}
+
+function hg() {
+	hlr $1 | grep $2
+}
+
+function hgp() {
+	for dir in $*
+		do
+			hg $dir 'part-'
+		done
+}
 
 function pres() {
 	cd /Users/abhishekmaheshwari/installed/presto/bin
