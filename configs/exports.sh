@@ -44,7 +44,7 @@ export LC_MESSAGES="en_US.UTF-8"
 export HISTCONTROL=erasedups
 export HISTSIZE=99999
 
-folders=( $JAVA_HOME/bin /usr/local/git/bin /usr/local/mysql/bin /opt/subversion/bin $HOME/installed/byobu/bin $HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $GIRAPH_HOME/bin $OOZIE_HOME/bin $HOME/bin $HOME/installed/bindfs/bin $GRADLE_HOME/bin $HBASE_HOME/bin )
+folders=( $JAVA_HOME/bin /usr/local/git/bin /usr/local/mysql/bin /opt/subversion/bin $HOME/installed/byobu/bin $HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $GIRAPH_HOME/bin $OOZIE_HOME/bin $HOME/bin $HOME/installed/bindfs/bin $HBASE_HOME/bin $GRADLE_HOME/bin )
 for folder in "${folders[@]}"; do
 	if [ -d "$folder" ] ; then
 		#echo $folder
