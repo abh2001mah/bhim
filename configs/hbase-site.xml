@@ -23,7 +23,7 @@
 <configuration>
 <property>
         <name>hbase.rootdir</name>
-        <value>hdfs://127.0.0.1:8020/hbase</value>
+        <value>hdfs://abhim3-m1ls-nndn-001:8020/hbase</value>
 </property>
 
 <property>
@@ -45,7 +45,7 @@
 </property>
 <property>
         <name>hbase.regionserver.info.bindAddress</name>
-        <value>127.0.0.1</value>
+        <value>abhim3-m1ls-nndn-001</value>
 </property>
 <property>
         <name>hbase.regionserver.info.port</name>
@@ -54,7 +54,7 @@
 
 <property>
         <name>hbase.zookeeper.quorum</name>
-        <value>127.0.0.1</value>
+        <value>abhim3-m1ls-nndn-001</value>
 </property>
 <property>
         <name>dfs.replication</name>
@@ -66,11 +66,11 @@
 </property>
 <property>
         <name>hbase.zookeeper.property.dataDir</name>
-        <value>hdfs://127.0.0.1:8020/zookeeper</value>
+        <value>hdfs://abhim3-m1ls-nndn-001:8020/zookeeper</value>
 </property>
 <property> 
 				<name>hbase.master</name> 
-				<value>127.0.0.1:60000</value> 
+				<value>abhim3-m1ls-nndn-001:60000</value> 
 </property>
 <property>
 				<name>hbase.hregion.max.filesize</name>
