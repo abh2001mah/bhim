@@ -1,0 +1,8 @@
+source $BYOBU_PREFIX/share/byobu/keybindings/common
+escape "^Aa"
+register x "^A"
+bindkey "^A"
+bindkey M-Left prev
+bindkey M-Right next
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
