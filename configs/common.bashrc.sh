@@ -195,6 +195,10 @@ function hgp() {
 		done
 }
 
+function hpc() {
+	hlr $1 | ~/bin/grep 'part-'| cut -d' ' -f14 | xargs hadoop dfs -cat
+}
+
 function pres() {
 	cd /Users/abhishekmaheshwari/installed/presto/bin
 	./presto --server localhost:8080 --catalog hive --schema $1
