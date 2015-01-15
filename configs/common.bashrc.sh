@@ -196,7 +196,7 @@ function hgp() {
 }
 
 function hpc() {
-	hlr $1 | ~/bin/grep 'part-'| cut -d' ' -f14 | xargs hadoop dfs -cat
+	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 | xargs hadoop dfs -cat
 }
 
 function pres() {
