@@ -198,6 +198,15 @@ function hpc() {
 	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 | xargs hadoop dfs -cat
 }
 
+function hph() {
+	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > /tmp/hph.txt
+	while read line 
+		do
+			echo "------- $line -------" 
+			hh $line
+		done < /tmp/hph.txt
+}
+
 function pres() {
 	cd /Users/abhishekmaheshwari/installed/presto/bin
 	./presto --server localhost:8080 --catalog hive --schema $1
