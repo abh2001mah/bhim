@@ -384,5 +384,5 @@ alias s2j="s2 java $1"
 alias s2x="s2 xml $1"
 alias s2p="s2 pig $1"
 alias s2c="s2 scala $1"
-
+alias om="gr OutOfMemoryError"
 
