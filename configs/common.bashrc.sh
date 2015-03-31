@@ -207,6 +207,18 @@ function hph() {
 		done < /tmp/hph.txt
 }
 
+function hpg() {
+	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > /tmp/hpg.txt
+	while read line 
+		do
+			search=`hc $line | grep $2`
+			if [ "$search" != "" ]; then
+				echo "------- $line -------"
+				echo $search
+			fi
+		done < /tmp/hpg.txt
+}
+
 function pres() {
 	cd /Users/abhishekmaheshwari/installed/presto/bin
 	./presto --server localhost:8080 --catalog hive --schema $1
