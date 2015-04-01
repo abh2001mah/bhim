@@ -183,15 +183,30 @@ function hw() {
 	hc $1 | wc
 }
 
-function hg() {
+function hgc() {
 	hlr $1 | grep $2
 }
 
-function hgp() {
+function hg() {
+	hlr $1 | ~/bin/grep $2
+}
+
+function hgpc() {
+	rm -rf /tmp/hgpc.txt
 	for dir in $*
 		do
-			hg $dir 'part-'
+			hgc $dir 'part-' | cut -d':' -f2 | cut -d' ' -f2 >> /tmp/hgpc.txt
 		done
+	cat /tmp/hgpc.txt
+}
+
+function hgp() {
+	rm -rf /tmp/hgp.txt
+	for dir in $*
+		do
+			hg $dir 'part-' | cut -d':' -f2 | cut -d' ' -f2 >> /tmp/hgp.txt
+		done
+	cat /tmp/hgp.txt
 }
 
 function hpc() {
