@@ -131,9 +131,13 @@ alias dn-rs="dn-stop; sleep 2; dn-start"
 alias nn-rs="nn-stop; sleep 2; nn-start"
 alias tt-rs="tt-stop; sleep 2; tt-start"
 alias jt-rs="jt-stop; sleep 2; jt-start"
+alias hul="cd ~/hadoop.tmp.dir/mapred/local/userlogs/"
 alias jp="jps | grep -v 'Jps\|RemoteMavenServer\|Launcher\|NailgunRunner'"
 alias ph="jp | grep -i 'node\|tracker\|worker\|master\|peer\|regionserver'"
 alias pi="pig -param_file $HOME/pig.properties "
+alias gw="jp | grep Child | wc"
+alias gcs="gr 'Completed superstep '"
+alias gfs="gr 'finishSuperstep: Superstep "
 #alias mio="$m1 install -o"
 #alias m2ci="$m2 clean install"
 #alias m2i="$m2 install"
@@ -183,6 +187,10 @@ function hw() {
 	hc $1 | wc
 }
 
+function hjl() {
+	cd ~/hadoop.tmp.dir/mapred/local/userlogs/$1
+}
+
 function hgc() {
 	hlr $1 | grep $2
 }
@@ -191,22 +199,34 @@ function hg() {
 	hlr $1 | ~/bin/grep $2
 }
 
-function hgpc() {
-	rm -rf /tmp/hgpc.txt
+function hga() {
+	file=/tmp/hga.txt
+	rm -rf $file 
 	for dir in $*
 		do
-			hgc $dir 'part-' | cut -d':' -f2 | cut -d' ' -f2 >> /tmp/hgpc.txt
+			hgc $dir 'part-' >> $file
 		done
-	cat /tmp/hgpc.txt
+	cat $file
+}
+
+function hgpc() {
+	file=/tmp/hgpc.txt
+	rm -rf $file
+	for dir in $*
+		do
+			hgc $dir 'part-' | cut -d':' -f2 | cut -d' ' -f2 >> $file
+		done
+	cat $file
 }
 
 function hgp() {
-	rm -rf /tmp/hgp.txt
+	file=/tmp/hgp.txt
+	rm -rf $file
 	for dir in $*
 		do
-			hg $dir 'part-' | cut -d':' -f2 | cut -d' ' -f2 >> /tmp/hgp.txt
+			hg $dir 'part-' | cut -d':' -f2 | cut -d' ' -f2 >> $file
 		done
-	cat /tmp/hgp.txt
+	cat $file
 }
 
 function hpc() {
@@ -214,16 +234,18 @@ function hpc() {
 }
 
 function hph() {
-	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > /tmp/hph.txt
+	file=/tmp/hph.txt
+	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > $file
 	while read line 
 		do
 			echo "------- $line -------" 
 			hh $line
-		done < /tmp/hph.txt
+		done < $file
 }
 
 function hpg() {
-	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > /tmp/hpg.txt
+	file=/tmp/hpg.txt
+	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > $file
 	while read line 
 		do
 			search=`hc $line | grep $2`
@@ -231,7 +253,7 @@ function hpg() {
 				echo "------- $line -------"
 				echo $search
 			fi
-		done < /tmp/hpg.txt
+		done < $file
 }
 
 function pres() {
