@@ -17,8 +17,6 @@ alias la="ll -A"
 alias lt="ll -t"
 alias lr="ll -R"
 alias grep='~/bin/grep --color=always'
-#alias vim="/usr/bin/vim -u ~$MY_USERNAME/bhim/configs/vimrc "
-#alias vimdiff="vimdiff -u ~$MY_USERNAME/bhim/configs/vimrc "
 alias b='vim ~/.bashrc'
 alias bp='vim ~/.bash_profile'
 alias p="pwd"

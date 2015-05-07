@@ -1,5 +1,6 @@
 # matches "bin" in any subfolder
 bin/
+*.patch
 
 # ignore all target directories
 target/
