@@ -77,7 +77,7 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias gsl="git stash list"
 alias guiau="git update-index --assume-unchanged "
-alias gb="git branch -a"
+alias gb="git branch"
 alias sve="svn propget svn:externals ."
 alias sme="svn pe svn:externals ."
 alias svi="svn propget svn:ignore ."
@@ -132,7 +132,8 @@ alias jt-rs="jt-stop; sleep 2; jt-start"
 alias hul="cd ~/hadoop.tmp.dir/mapred/local/userlogs/"
 alias jp="jps | grep -v 'Jps\|RemoteMavenServer\|Launcher\|NailgunRunner'"
 alias ph="jp | grep -i 'node\|tracker\|worker\|master\|peer\|regionserver'"
-alias pi="pig -param_file $HOME/pig.properties "
+alias pi="pig -stop_on_failure -param_file $HOME/pig.properties "
+alias pix="pi -x local"
 alias gw="jp | grep Child | wc"
 alias gcs="gr 'Completed superstep '"
 alias gfs="gr 'finishSuperstep: Superstep "
@@ -179,6 +180,10 @@ alias links="la | grep '\->'"
 
 function hh() {
 	hc $1 | head
+}
+
+function ht() {
+  hc $1 | tail
 }
 
 function hw() {
@@ -239,6 +244,16 @@ function hph() {
 			echo "------- $line -------" 
 			hh $line
 		done < $file
+}
+
+function hpt() {
+  file=/tmp/hpt.txt
+  hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > $file
+  while read line
+    do
+      echo "------- $line -------"
+      ht $line
+    done < $file
 }
 
 function hpg() {
@@ -431,5 +446,6 @@ alias s2j="s2 java $1"
 alias s2x="s2 xml $1"
 alias s2p="s2 pig $1"
 alias s2c="s2 scala $1"
+alias s2a="s1 $1"
 alias om="gr OutOfMemoryError"
 

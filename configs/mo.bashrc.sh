@@ -6,7 +6,8 @@ alias bd="./build.sh -Pdev -DskipTests -o"
 alias pv='ping 115.112.115.67'
 alias mo='cd $HOME/mobileum'
 alias dm="cd $HOME/scm/mobileum/datamodel"
-alias pc="find ~/scm/mobileum/datamodel/ -name \"*.pig\" | xargs -I {} cp {} /opt/mobileum/oozie/DataModels/lib/"
+alias dpc="find ~/scm/mobileum/datamodel/ -name \"*.pig\" | xargs -I {} cp {} /opt/mobileum/oozie/DataModels/lib/"
+alias fpc="find ~/scm/mobileum/fraud/ -name \"*.pig\" | xargs -I {} cp {} /opt/mobileum/oozie/DataModels/lib/"
 export cdbug=" -Dstandalone.client.debug=true"
 export sdbug=" -Dmaven.surefire.debug=true"
 export mts=" -Dmaven.test.skip=true"
