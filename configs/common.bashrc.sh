@@ -8,7 +8,7 @@ export mst=" -Dmaven.test.skip=true"
 export grs="| grep -v .svn | grep -v '/target/'"
 export mg="-Dhadoop=non_secure -Phadoop_1 -DskipTests -DskipJavadoc -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true"
 
-alias ls="ls -htHFG"
+alias ls="ls -hHFG"
 #alias ls="ls -htHFG --color=always"
 alias l="ls"
 alias cd2="cd; cd -"
