@@ -2,7 +2,7 @@
 shopt -s expand_aliases
 source $HOME/common.bashrc.sh
 
-alias bd="./build.sh -Pdev -DskipTests -o"
+alias bd="./build.sh -Pprod -DskipTests -o"
 alias pv='ping 115.112.115.67'
 alias mo='cd $HOME/mobileum'
 alias dm="cd $HOME/scm/mobileum/datamodel"

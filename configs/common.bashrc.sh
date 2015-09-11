@@ -83,9 +83,10 @@ alias sme="svn pe svn:externals ."
 alias svi="svn propget svn:ignore ."
 alias smi="svn pe svn:ignore ."
 alias bb="byobu"
+alias bn="byobu new -s"
+alias br="byobu rename -t"
 alias gvimdiff='gvim -d'
 alias tarx='tar --exclude-vcs'
-alias cmscp='export CLASSPATH=$(find /usr/share/fk-cms-backend/webapps/cms/WEB-INF/lib/|xargs -i echo -n "{}:")'
 alias rsync='rsync -ahrvzC'
 alias ip='ifconfig | grep inet'
 #alias ip='hostname -i'
@@ -95,28 +96,38 @@ alias ps='ps -e'
 alias psg="ps | grep -v \"grep\""
 alias pgt='psg | grep Dcatalina.home='
 alias pgj='psg | grep java'
+alias mdt='mvn dependency:tree'
 export m1='mvn -Dcheckstyle.skip=true -DskipTests -DskipJavadoc -Dmaven.javadoc.skip=true -DdownloadJavadocs=false -DdownloadSources=false'
 export m2="$m1 -Dmaven.test.skip=true"
 export maven="$m1"
 alias em="echo $maven"
 alias jh="cd $JAVA_HOME"
-#alias hd="hdfs dfs"
-alias hd="hadoop dfs"
-alias hl="hd -ls"
-alias hlr="hd -lsr"
+alias hd="hdfs dfs"
+#alias hd="hadoop dfs"
+alias hl="hd -ls -h"
+alias hlr="hl -R"
 alias hc="hd -cat"
 alias hr="hd -rm"
-alias hu="hd -dus"
+alias hrr="hd -rm -r"
+alias hu="hd -du -s -h"
 alias hp="hd -put"
-alias hdr="hadoop dfsadmin -report"
-alias hk="hadoop job -kill"
-alias hj="hadoop job -list"
+alias hdr="hdfs dfsadmin -report"
+alias hk="hdfs job -kill"
+alias hj="hdfs job -list"
+#alias hdr="hadoop dfsadmin -report"
+#alias hk="hadoop job -kill"
+#alias hj="hadoop job -list"
+alias hsa="start-dfs.sh; start-yarn.sh; mr-jobhistory-daemon.sh start historyserver; sleep 2; ph"
+alias hso="stop-dfs.sh; stop-yarn.sh; mr-jobhistory-daemon.sh stop historyserver; sleep 2; ph"
 alias hs1="$HADOOP_PREFIX/bin/start-all.sh; sleep 2; ph"
 alias hs2="$HADOOP_PREFIX/bin/stop-all.sh; sleep 2; ph"
-alias hrs="$HADOOP_PREFIX/bin/stop-all.sh; sleep 2; $HADOOP_PREFIX/bin/start-all.sh; ph"
+alias hrs="stop-dfs.sh; stop-yarn.sh; sleep 2; start-dfs.sh; start-yarn.sh; sleep 2; ph"
+#alias hrs="$HADOOP_PREFIX/bin/stop-all.sh; sleep 2; $HADOOP_PREFIX/bin/start-all.sh; ph"
 alias ss1="$SPARK_HOME/sbin/start-all.sh; sleep 2; ph"
 alias ss2="$SPARK_HOME/sbin/stop-all.sh; sleep 2; ph"
 alias srs="$SPARK_HOME/sbin/stop-all.sh; sleep 2; $SPARK_HOME/sbin/start-all.sh; ph"
+alias yla="yarn logs -applicationId "
+alias ssl="spark-submit --master local[*] --class "
 alias dn-start="hadoop-daemon.sh start datanode; ph"
 alias dn-stop="hadoop-daemon.sh stop datanode; ph"
 alias nn-start="hadoop-daemon.sh start namenode; ph"
@@ -131,12 +142,15 @@ alias tt-rs="tt-stop; sleep 2; tt-start"
 alias jt-rs="jt-stop; sleep 2; jt-start"
 alias hul="cd ~/hadoop.tmp.dir/mapred/local/userlogs/"
 alias jp="jps | grep -v 'Jps\|RemoteMavenServer\|Launcher\|NailgunRunner'"
-alias ph="jp | grep -i 'node\|tracker\|worker\|master\|peer\|regionserver'"
+alias ph="jp | grep -i 'node\|tracker\|worker\|master\|peer\|regionserver\|manager\|historyserver\|bootstrap'"
 alias pi="pig -stop_on_failure -param_file $HOME/pig.properties "
 alias pix="pi -x local"
 alias gw="jp | grep Child | wc"
 alias gcs="gr 'Completed superstep '"
 alias gfs="gr 'finishSuperstep: Superstep "
+alias java='java -Djava.awt.headless=true -Dapple.awt.UIElement=true'
+alias oos="oozie job -oozie http://localhost:11000/oozie -info "
+alias oor="oozie job -oozie http://localhost:11000/oozie/ -config "
 #alias mio="$m1 install -o"
 #alias m2ci="$m2 clean install"
 #alias m2i="$m2 install"
@@ -204,7 +218,7 @@ function hg() {
 
 function hga() {
 	file=/tmp/hga.txt
-	rm -rf $file 
+	rm -rf $file
 	for dir in $*
 		do
 			hgc $dir 'part-' >> $file
@@ -239,9 +253,9 @@ function hpc() {
 function hph() {
 	file=/tmp/hph.txt
 	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > $file
-	while read line 
+	while read line
 		do
-			echo "------- $line -------" 
+			echo "------- $line -------"
 			hh $line
 		done < $file
 }
@@ -259,7 +273,7 @@ function hpt() {
 function hpg() {
 	file=/tmp/hpg.txt
 	hlr $1 | ~/bin/grep 'part-'| cut -d':' -f2 | cut -d' ' -f2 > $file
-	while read line 
+	while read line
 		do
 			search=`hc $line | grep $2`
 			if [ "$search" != "" ]; then
@@ -279,7 +293,7 @@ for i in 1 5 10
 	do
 		alias wa$i="watch --differences -n $i"
 	done
-	
+
 function path() {
 	for p in $(echo $PATH | tr ":" "\n")
 		do
@@ -332,7 +346,7 @@ function slowq() {
 	sudo tail $lines /var/lib/mysql/$HOST-slow.log > /tmp/$HOST.bhim.slow.query;
 	mysqlsla -lt slow /tmp/$HOST.bhim.slow.query | less
 }
- 
+
 function grd() {
 	files=`find $2 -name "$3*" -type f | grep -v .svn | grep -v '/target/'`
 	echo $files;
@@ -448,4 +462,3 @@ alias s2p="s2 pig $1"
 alias s2c="s2 scala $1"
 alias s2a="s1 $1"
 alias om="gr OutOfMemoryError"
-

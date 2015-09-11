@@ -1,0 +1,11 @@
+di alect "java"
+no-loop true
+
+rule test1
+  agenda-group "set1"
+  enabled false
+  when
+
+  then
+    $labels. addLable("L1");
+  end

@@ -2,7 +2,7 @@
 #export MY_USERNAME=abhishekmaheshwari
 #export MY_HOME=/Users/abhishekmaheshwari
 #export JAVA_HOME=`/usr/libexec/java_home`
-export JAVA_HOME=$HOME/installed/java
+#export JAVA_HOME=$HOME/installed/java
 
 for file in ~/bhim/configs/exports.sh ~/common.bashrc.sh ~/local.bashrc.sh 
 do

@@ -52,10 +52,6 @@ public class LRUCache<K,V> implements Cache<K,V> {
 }
 
 
-// 1. we can also use org.apache.commons.collections.map.LRUMap to achieve the same. LRUMap is not a thread-safe implementation so we should use locks (just like in this implementation) to make it concurrent
+// 1. we can also use org.apache.commons.collections.map.LRUMap to achieve the same. LRUMap is not a thread-safe implementation so we should use locks (just like in this implementation) to make it concurrent.
 
-// 2. we can also use org.apache.solr.util.ConcurrentLRUCache with size and lowerWatermark both as maxEntries. This implementation is thread-safe.
-
-// 3. we can also directly use android.util.LruCache with maxEntries. This implementation is thread-safe.
-
-//4. we can also build com.google.common.cache.Cache from com.google.common.cache.CacheBuilder.newBuilder().maximumSize(maxEntries).build(). This implementation is thread-safe.
+//2. we can also build com.google.common.cache.Cache from com.google.common.cache.CacheBuilder.newBuilder().maximumSize(maxEntries).build(). This implementation is thread-safe.

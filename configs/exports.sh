@@ -7,7 +7,6 @@
 export ANT_HOME=$HOME/installed/ant
 export MAVEN_HOME=$HOME/installed/maven
 export MAHOUT_HOME=$HOME/installed/mahout
-export SCALA_HOME=$HOME/installed/scala
 export JAVA_HOME=$HOME/installed/java
 export OOZIE_HOME=$HOME/installed/oozie
 export HADOOP_PREFIX=$HOME/installed/hadoop
@@ -18,7 +17,7 @@ export GIRAPH_HOME=$HOME/installed/giraph
 export PRESTO_HOME=$HOME/installed/presto
 export GRADLE_HOME=$HOME/installed/gradle
 export HBASE_HOME=$HOME/installed/hbase
-
+#export SCALA_HOME=$HOME/installed/scala
 #export HADOOP_MAPRED_HOME=$HADOOP_HOME
 #export HADOOP_COMMON_HOME=$HADOOP_HOME
 #export HADOOP_HDFS_HOME=$HADOOP_HOME
@@ -26,7 +25,7 @@ export HBASE_HOME=$HOME/installed/hbase
 #export YARN_HOME=$HADOOP_HOME
 #export YARN_CONF_DIR=$HADOOP_CONF_DIR
 #export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-#export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+#export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib/native $HADOOP_OPTS"
 
 export SVN_EDITOR=vim
 export EDITOR=vim
@@ -44,15 +43,19 @@ export LC_MESSAGES="en_US.UTF-8"
 export HISTCONTROL=erasedups
 export HISTSIZE=99999
 
-folders=( $JAVA_HOME/bin /usr/local/git/bin /usr/local/mysql/bin /opt/subversion/bin $HOME/installed/byobu/bin $HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $SCALA_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $GIRAPH_HOME/bin $OOZIE_HOME/bin $HOME/installed/bindfs/bin $HBASE_HOME/bin $GRADLE_HOME/bin $HOME/bin )
+folders=( /usr/local/git/bin /usr/local/mysql/bin /opt/subversion/bin $HOME/installed/byobu/bin $HOME/installed/gnuplot/bin $MAVEN_HOME/bin $ANT_HOME/bin $MAHOUT_HOME/bin $PRESTO_HOME/bin $PIG_HOME/bin $SPARK_HOME/bin $SPARK_HOME/sbin $HADOOP_PREFIX/bin $HADOOP_PREFIX/sbin $GIRAPH_HOME/bin $OOZIE_HOME/bin $HOME/installed/bindfs/bin $HBASE_HOME/bin $GRADLE_HOME/bin $JAVA_HOME/bin $HOME/bin )
 for folder in "${folders[@]}"; do
 	if [ -d "$folder" ] ; then
 		#echo $folder
 		PATH="$folder:$PATH"
 	fi
 done
-export LD_LIBRARY_PATH="$HADOOP_PREFIX/lib/native:$LD_LIBRARY_PATH"
-export MYSQL_HOME="/usr/local/mysql"
-#export APACHE_DOC_ROOT="/Library/WebServer/Documents"
+export mapred_app_classpath="`hadoop classpath | tr ":" ","`,$PIG_HOME/pig-withouthadoop.jar"
+alias macp="echo $mapred_app_classpath"
+export yarn_app_classpath="`yarn classpath | tr ":" ","`"
+alias yacp="echo $yarn_app_classpath"
+
+#export LD_LIBRARY_PATH="$HADOOP_PREFIX/lib/native:$LD_LIBRARY_PATH"
+#export MYSQL_HOME="/usr/local/mysql"
 #export ARTIFACTORY_HOME="/opt/artifactory"
 #export BOOST_ROOT='/act/boost/boost_1_42_0'
