@@ -1,4 +1,4 @@
-
+package com.sample.abhim;
 public class SubClass extends SuperClass {
 	
 	public void method(String s) {

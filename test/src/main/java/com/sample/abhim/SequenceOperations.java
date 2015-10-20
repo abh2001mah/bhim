@@ -1,3 +1,4 @@
+package com.sample.abhim;
 public class SequenceOperations {
 	
 	public static void main(String[] args) {

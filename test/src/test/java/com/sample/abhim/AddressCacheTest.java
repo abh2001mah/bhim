@@ -1,4 +1,4 @@
-package prep;
+package com.sample.abhim;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

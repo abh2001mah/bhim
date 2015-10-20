@@ -1,8 +1,8 @@
+package com.sample.abhim;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +22,6 @@ public class TryCatchTest {
 	public void testFinallyWithInturrupts() {
 		final CyclicBarrier barrier = new CyclicBarrier(2);
 		Runnable runnable = new Runnable() {
-			@Override
 			public void run() {
 				try {
 					TimeUnit.SECONDS.sleep(5);
