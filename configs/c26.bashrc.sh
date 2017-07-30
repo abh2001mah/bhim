@@ -9,6 +9,12 @@ alias dm="cd $HOME/scm/mobileum/datamodel"
 alias dpc="find ~/scm/mobileum/datamodel/ -name \"*.pig\" | xargs -I {} cp {} /opt/mobileum/oozie/DataModels/lib/"
 alias fpc="find ~/scm/mobileum/fraud/ -name \"*.pig\" | xargs -I {} cp {} /opt/mobileum/oozie/DataModels/lib/"
 
+alias mdb="ssh abhishekmaheshwari@69.164.217.110 -p 17576"
+alias sdb="ssh abhishekmaheshwari@45.33.77.90 -p 17576"
+alias dashboard="ssh abhishekmaheshwari@50.116.53.117 -p 17576"
+alias builderapk="ssh abhishekmaheshwari@45.79.190.24 -p 17576"
+#alias staging="ssh cube26@staging.theneonos.net -p 17576"
+
 function mcs() {
 	echo "mvn clean verify -Pcheck-short $1 $2 $3 | tee check-short.log" | tee check-short.log
 	mvn clean verify -Pcheck-short $1 $2 $3 | tee -a check-short.log

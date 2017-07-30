@@ -1,5 +1,21 @@
+execute pathogen#infect()
+set nocompatible              " be iMproved, required
 set viminfo='10,\"100,:20,%,n~/.viminfo
-set nocompatible
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 set matchpairs+=(:),{:},[:],<:>
 set showmatch
 "set mouse=a  "does not work on mac for copy purposes
@@ -65,9 +81,6 @@ nmap r :redo<CR>
 nmap ls :!ls<CR>
 nmap pwd :!pwd<CR>
  
-"Copy current file to clipboard
-nmap <C-x>	:!cat %\|sed 's/	/    /g'\|pbcopy<CR><CR>
-
 "Automatically cd into the directory that the file is in 
 "autocmd BufEnter * lcd %:p:h
 "set autochdir 
@@ -86,5 +99,5 @@ filetype plugin on
 " When editing a file, always jump to the last cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-
-
+" ~/.vim/filetype.vim
+au BufNewFile,BufRead *.gradle setf groovy

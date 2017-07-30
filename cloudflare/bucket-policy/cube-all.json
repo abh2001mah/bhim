@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Cube26 office for all operations",
+    "Statement": [
+        {
+            "Sid": "Cube26 office for all operations",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::bucketname/*",
+            "Condition": {
+                "NotIpAddress": {
+                    "aws:SourceIp": [
+                      "180.151.30.100",
+                      "182.73.110.189",
+                      "180.151.30.99"
+                    ]
+                }
+            }
+        }
+    ]
+}

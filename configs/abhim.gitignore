@@ -1,0 +1,8 @@
+### Abhim ###
+mci.log
+mi.log
+
+### Hadoop ###
+pig_*.log
+*.pig.expanded
+

@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Only Cube26 office for GetObject",
+    "Statement": [
+        {
+            "Sid": "Only Cube26 office for GetObject",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::bucketname/*",
+            "Condition": {
+                "NotIpAddress": {
+                    "aws:SourceIp": [
+                      "180.151.30.100",
+                      "182.73.110.189",
+                      "180.151.30.99"
+                    ]
+                }
+            }
+        }
+    ]
+}

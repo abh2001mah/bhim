@@ -1,18 +1,14 @@
 #!/bin/bash
-#export MY_USERNAME=abhishekmaheshwari
-#export MY_HOME=/Users/abhishekmaheshwari
-#export JAVA_HOME=`/usr/libexec/java_home`
-#export JAVA_HOME=$HOME/installed/java
-
-for file in ~/bhim/configs/exports.sh ~/common.bashrc.sh ~/local.bashrc.sh 
+for file in ~/bhim/configs/exports.sh ~/common.bashrc.sh ~/local.bashrc.sh ~/bhim/configs/aws.bashrc.sh ~/bhim/configs/git-completion.bash ~/bhim/configs/gradle-completion.bash
 do
 	if [ -f "$file" ]; then
-#		echo $file
 		. "$file"
+		#echo $file
 	fi
 done
 
-export PS1='[\t|\W]\\$ '
+#export PS1='[\t|\W]\\$ '
+export PS1='[\W]$'
 #export HOST=`hostname -s|cut -d'-' -f 5`
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##/*/}\007"'
 
@@ -29,4 +25,3 @@ case ${TERM} in
                 PROMPT_COMMAND='echo -ne  "\033k${HOST}|${PWD##/*/}\033\\"'
                 ;;
 esac
-
