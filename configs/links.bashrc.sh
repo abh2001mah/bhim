@@ -1,4 +1,10 @@
 #!/bin/bash
+#https://github.com/robbyrussell/oh-my-zsh
+#https://github.com/zsh-users/zsh-autosuggestions
+#https://github.com/zsh-users/zsh-completions
+#https://github.com/zsh-users/zsh-syntax-highlighting
+#https://github.com/unixorn/awesome-zsh-plugins
+#
 ln -sf ~/bhim/configs/bash.profile.sh ~/.bash_profile
 ln -sf ~/bhim/configs/home.bashrc.sh ~/.bashrc
 ln -sf ~/bhim/configs/my.cnf ~/.my.cnf
